@@ -22,9 +22,7 @@ function App() {
         <Route path='/editor/:id' element={<EditorPost/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/register' element={<Register/>}/>
-      </Routes>
-      
-     
+      </Routes> 
     </div>
   )
 }
