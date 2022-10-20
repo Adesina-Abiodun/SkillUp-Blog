@@ -22,7 +22,7 @@ const NavBar = () => {
         </header>
 
         <nav className="nav">
-            <div className="nav-list">
+            <div className="home">
                 <ul>
                     <NavLink to={'/'}><li>Home</li></NavLink>
                     <NavLink to={'/post/:id'}><li>Articles</li></NavLink>
