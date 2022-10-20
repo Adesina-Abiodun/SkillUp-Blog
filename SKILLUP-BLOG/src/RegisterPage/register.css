@@ -107,7 +107,7 @@ button {
   color: #F3F2FF;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
   .register-banner {
     display: none;
   }
