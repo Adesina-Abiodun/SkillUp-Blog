@@ -4,11 +4,17 @@
     box-sizing: border-box;
 }
 
+.banner{
+    height: 500px;
+    width: 80%;
+}
+
 .header {
     border-bottom: 1px solid gray;
     margin-left: 3rem;
     margin-right: 3rem;
     padding-bottom: 0.5rem;
+    margin-top: 70rem;
 }
 
 .blogPost {
@@ -24,7 +30,7 @@
 }
 
 .blog-container {
-    margin: 2rem;
+    margin: 3rem 2rem 7rem 2rem;
     width: 372px;
     height: 320px;
     /* gap: 2rem; */
@@ -33,11 +39,33 @@
 .homeBtn {
     padding: 0.7rem 2rem;
     font-family: 'Helvetica Neue';
-    font-weight: 500;
+    width: 300px;
+    font-weight: 300;
     font-size: 30px;
     background: #2F2E41;
     border-radius: 10px;
     color: #F3F2FF;
     border: none;
-    
+}
+
+.btn-container{
+    margin-top: 8rem;
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.date {
+    margin-bottom: 0.5rem;
+}
+
+.article-title {
+    margin-bottom: 0.5rem;
+}
+
+.main-article {
+    margin-bottom: 10rem;
+    color: red;
+    border: solid 1px black;
 }

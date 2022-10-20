@@ -16,7 +16,11 @@ const Home = () => {
 
     return ( 
         <div>
-            <NavBar/>            
+            <NavBar/>
+            {/* <div className="banner">
+                
+            </div> */}
+
             <h1 className="header">Latest Articles</h1>
             
             <div className="blogPost">
@@ -24,15 +28,16 @@ const Home = () => {
                     return(
                         <div className="blog-container" key={posts._id}>
                             <div ><img className="articleImage" src={posts.url} alt="" /></div>
-                            <p>{moment(posts.date).format('Do MMMM YYYY, h:mm:ss a')}</p>
-                            <h3>{posts.title}</h3>
-                            <p>{posts.thumbnailUrl}</p>
+                            <p className="date">{moment(posts.date).startOf('hour').fromNow()}</p>
+                            <h4 className="article-title">{posts.title}</h4>
+                            <p className="main-article">{posts.thumbnailUrl}</p>
                         </div>
                     )
-                
                 })}
             </div>
-            <button className="homeBtn" type="submit">Load more articles</button>
+            <div className="btn-container">
+                <button className="homeBtn" type="submit">Load more articles</button>
+            </div>
         </div>
     );
 }
