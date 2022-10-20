@@ -4,19 +4,17 @@ import { NavLink } from "react-router-dom"
 import './Login.css'
 import v1 from './img/v1.svg'
 import v2 from './img/v1.svg'
-import NavBar from '../NavBar/NavBar'
 
 
 function Login() {
 
-  const {regiser, handleSubmit} = useForm()
+  const { regiser, handleSubmit } = useForm()
 
- 
+
 
   return (
     <div className='loginpage'>
       <div className="txtcnt">
-      <NavBar/>
         <NavLink className="home" to="/">SkillUp Africa Blog</NavLink>
         <h2 className="title">The Ancient city of Rome and the history of the great city.</h2>
         <div id='autor'>
@@ -29,17 +27,15 @@ function Login() {
         <p>Welcome back, please enter your details</p>
         <form className='fom' action="">
           <button>Sign in with Google</button>
-          <br/><br/>
-          <p><img src={v1}/>or<img src={v2}/></p>
-          <input type="email" placeholder='Email Address'/>
-          <p><img src={v2}/></p>
-          <br/>
+          <br /><br />
+          <p><img src={v1} />or<img src={v2} /></p>
+          <input type="email" placeholder='Email Address' />
+          <br />
           <input type="password" placeholder='Password' />
-          <p><img src={v2}/></p>
           <p id='pswrd'><NavLink>Forget Password</NavLink></p>
           <button id='login'>Login</button>
         </form>
-        <p>Not registered yet? Create an Account</p> 
+        <p>Not registered yet? Create an Account</p>
       </div>
     </div>
   )
