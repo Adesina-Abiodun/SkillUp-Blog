@@ -12,8 +12,8 @@
     height: 100vh;
     width: 100vw;
   }
-  
-  .register-wrapper {
+
+  /* .register-wrapper {
     display: flex;
     max-width: 70%;
     justify-content: center;
@@ -40,18 +40,26 @@
   .register-banner a:hover {
     color: black;
     text-decoration: underline;
-  }
+  } */
   
   .banner-text {
     display: flex;
     flex-direction: column;
-    height: 45%;
+    height: 100%;
+    width: 65%;
+    padding: 30px 20px;
     justify-content: space-between;
   }
-  
+  .home{
+    text-decoration: none;
+    color: white;
+    margin-bottom: 400px;
+  }
   .banner-text h2 {
+    width: 100%;
     font-weight: 700;
-    font-size: 36px;
+    font-size: 19rem;
+    color: white;
   }
   
   .banner-text h3 {
