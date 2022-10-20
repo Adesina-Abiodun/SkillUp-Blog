@@ -17,8 +17,32 @@ const Register = () => {
         </div>
       </div>
 
-      <div className="register-form">
-        <h1>Form</h1>
+      <div className="form-wrapper">
+
+        <div className="register-form">
+
+          <div className="form-title">
+            <h2>Create an account</h2>
+            <p>Let’s start a journey to great articles</p>
+          </div>
+
+          <form>
+            <input type="text" placeholder="Name" />
+            <br />
+            <input type="email" placeholder="Email Address" />
+            <br />
+            <input type="text" placeholder="Add profile picture" />
+            <br />
+            <input type="password" placeholder="Password" />
+            <br />
+            <input type="password" placeholder="Confirm Password" />
+            <br />
+          </form>
+
+          <button type="submit">Create an account</button>
+          <p>Already have an account? <NavLink to="/login">Log in</NavLink></p>
+
+        </div>
       </div>
 
     </section>

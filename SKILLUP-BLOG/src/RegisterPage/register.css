@@ -15,7 +15,8 @@ body {
 
 .register-wrapper {
   display: flex;
-  max-width: 70%;
+  max-width: 90%;
+  margin: auto;
   justify-content: center;
   min-height: 600px;
 }
@@ -26,27 +27,20 @@ body {
   background-position: center;
   padding: 45px;
   color: #F3F2FF;
-  /* width: 900px; */
-  width: 70%;
+  width: auto;
   display: flex;
   flex-direction: column;
 }
 
-.register-banner a {
+a {
   color: currentColor;
-  text-decoration: none;
   margin-bottom: auto;
-}
-
-.register-banner a:hover {
-  color: black;
-  text-decoration: underline;
 }
 
 .banner-text {
   display: flex;
   flex-direction: column;
-  height: 45%;
+  height: 35%;
   justify-content: space-between;
 }
 
@@ -65,8 +59,49 @@ body {
   font-size: 24px;
 }
 
+.form-wrapper {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 45px;
+  background-color: #F3F2FF;
+}
+
 .register-form {
-  width: 30%;
-  /* background: #F3F2FF; */
-  background-color: black;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 100px;
+  height: 50%;
+  color: #2F2E41;
+}
+
+.form-title {
+  line-height: 10px;
+  font-weight: lighter;
+}
+
+form,
+button,
+p {
+  margin-top: 25px;
+}
+
+form input {
+  outline: none;
+  border: none;
+  width: 100%;
+  margin-top: 25px;
+  background-color: transparent;
+  border-bottom: 2px rgba(47, 46, 65, 0.15) solid;
+}
+
+button {
+  background-color: rgba(47, 46, 65, 0.8);
+  padding: 5px;
+  border-radius: 5px;
+  width: 90%;
+  border: none;
+  outline: none;
+  color: #F3F2FF;
 }
