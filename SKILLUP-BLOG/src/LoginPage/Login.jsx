@@ -24,9 +24,13 @@ function Login() {
         <h1>Welcome Back!</h1>
         <p>Welcome back, please enter your details</p>
         <form action="">
-        <button>Sign in with Google</button>
+        <button>Sign in with Google</button><br/><br/>
+        <p></p>
         <input type="email" placeholder='Email Address'/>
+        <p></p>
+        <br/>
         <input type="password" placeholder='Password' />
+        <p></p>
         <p>Forget Password</p>
         <button>Login</button>
         </form>
