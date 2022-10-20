@@ -1,6 +1,11 @@
+import NavBar from '../NavBar/NavBar'
+
+
 const EditorPost = () => {
     return (  
-        <div>Editor's Post</div>
+        <div>
+            <NavBar/>
+            Editor's Post</div>
     );
 }
  

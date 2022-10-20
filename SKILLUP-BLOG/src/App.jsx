@@ -1,5 +1,14 @@
-import './App.css'
 import {Routes, Route} from 'react-router-dom'
+import Home from './Home/Home'
+import Article from './ArticlePage/Article'
+import AddPost from './AddPostPage/AddPost'
+import EditorPost from './EditorPage/EditorPost'
+import Login from './LoginPage/Login'
+import Register from './RegisterPage/Register'
+
+
+
+
 
 
 function App() {
@@ -7,28 +16,12 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path='/'>
-          <NavBar/>
-          <Home/>
-        </Route>
-        <Route path='/post/:id'>
-          <NavBar/>
-          <Article/>
-        </Route>
-        <Route path='/add-post'>
-          <NavBar/>
-          <AddPost/>
-        </Route>
-        <Route path='/editor/:id'>
-          <NavBar/>
-          <EditorPost/>
-        </Route>
-        <Route path='/login'>
-          <Login/>
-        </Route>
-        <Route path='/register'>
-          <Register/>
-        </Route>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/post/:id' element={<Article/>}/>
+        <Route path='/add-post' element={<AddPost/>}/>
+        <Route path='/editor/:id' element={<EditorPost/>}/>
+        <Route path='/login' element={<Login/>}/>
+        <Route path='/register' element={<Register/>}/>
       </Routes>
       
      
