@@ -40,7 +40,7 @@ a {
 .banner-text {
   display: flex;
   flex-direction: column;
-  height: 35%;
+  min-height: 35%;
   justify-content: space-between;
 }
 
@@ -61,6 +61,7 @@ a {
 
 .form-wrapper {
   width: 33%;
+  min-width: 400px;
   display: flex;
   flex-direction: column;
   padding: 0 45px;
@@ -104,4 +105,10 @@ button {
   border: none;
   outline: none;
   color: #F3F2FF;
+}
+
+@media screen and (max-width: 900px) {
+  .register-banner {
+    display: none;
+  }
 }
