@@ -20,10 +20,10 @@ const Home = () => {
             <h1 className="header">Latest Articles</h1>
             
             <div className="blogPost">
-                {posts.map((posts) => {
+                {posts?.slice(0,9).map((posts) => {
                     return(
                         <div className="blog-container" key={posts._id}>
-                            <div className="articleImage"><img src={posts.url} alt="" /></div>
+                            <div ><img className="articleImage" src={posts.url} alt="" /></div>
                             <p>{moment(posts.date).format('Do MMMM YYYY, h:mm:ss a')}</p>
                             <h3>{posts.title}</h3>
                             <p>{posts.thumbnailUrl}</p>

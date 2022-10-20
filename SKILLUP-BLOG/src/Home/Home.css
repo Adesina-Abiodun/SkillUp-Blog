@@ -14,8 +14,7 @@
 .blogPost {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-bottom: 40px;
+    /* gap: 2rem; */
 }
 
 .articleImage {
@@ -26,6 +25,9 @@
 
 .blog-container {
     margin: 2rem;
+    width: 372px;
+    height: 320px;
+    /* gap: 2rem; */
 }
 
 .homeBtn {
