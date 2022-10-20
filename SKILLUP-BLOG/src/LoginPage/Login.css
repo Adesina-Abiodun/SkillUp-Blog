@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, sans-serif;
+  }
+  
+ .loginpage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  /* .register-wrapper {
+    display: flex;
+    max-width: 70%;
+    justify-content: center;
+    min-height: 600px;
+  }
+  
+  .register-banner {
+    background-image: url(./images/bg.svg);
+    background-size: cover;
+    background-position: center;
+    padding: 45px;
+    color: #F3F2FF;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .register-banner a {
+    color: currentColor;
+    text-decoration: none;
+    margin-bottom: auto;
+  }
+  
+  .register-banner a:hover {
+    color: black;
+    text-decoration: underline;
+  } */
+  
+  .banner-text {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 65%;
+    padding: 30px 20px;
+    justify-content: space-between;
+  }
+  .home{
+    text-decoration: none;
+    color: white;
+    margin-bottom: 400px;
+  }
+  .banner-text h2 {
+    width: 100%;
+    font-weight: 700;
+    font-size: 19rem;
+    color: white;
+  }
+  
+  .banner-text h3 {
+    font-weight: 500;
+    font-size: 40px;
+  }
+  
+  .banner-text h4 {
+    font-weight: 500;
+    font-size: 24px;
+  }
+  
+  .register-form {
+    width: 30%;
+    /* background: #F3F2FF; */
+    background-color: black;
+  }
