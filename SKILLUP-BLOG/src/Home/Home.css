@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    border-bottom: 1px solid gray;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    padding-bottom: 0.5rem;
+}
+
+.blogPost {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 40px;
+}
+
+.articleImage {
+    width: 372px;
+    height: 320px;
+    border-radius: 10px;
+}
+
+.blog-container {
+    margin: 2rem;
+}
+
+.homeBtn {
+    padding: 0.7rem 2rem;
+    font-family: 'Helvetica Neue';
+    font-weight: 500;
+    font-size: 30px;
+    background: #2F2E41;
+    border-radius: 10px;
+    color: #F3F2FF;
+    border: none;
+    
+}
