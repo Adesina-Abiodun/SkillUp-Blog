@@ -1,10 +1,14 @@
 import NavBar from "../NavBar/NavBar";
+import './Home.css'
 
 const Home = () => {
     return ( 
         <div>
             <NavBar/>            
-            HOME PAGE</div>
+            <div className="banner">
+                
+            </div>
+            </div>
      );
 }
  
