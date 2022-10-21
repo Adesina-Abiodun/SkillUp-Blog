@@ -1,15 +1,24 @@
 import React from 'react'
 import { useForm } from "react-hook-form"
 import { NavLink } from "react-router-dom"
-// import{ FcGoogle } from "react-icons/fa"
 import './Login.css'
+import google from './img/google.svg'
 import v1 from './img/v1.svg'
 import v2 from './img/v1.svg'
 
 
 function Login() {
 
-  // const { regiser, handleSubmit } = useForm()
+  const { register, handleSubmit } = useForm();
+
+  const submitDetails = (data) => {
+    axios.post("https://dashboard.heroku.com/apps/miniblogskillup/api/users/login", data)
+    .then((result) => {
+      console.log(result.data)
+      alert(result.data.message);
+    });
+    
+  };
 
 
 
@@ -29,18 +38,18 @@ function Login() {
           <h1 id='welcm'>Welcome Back!</h1>
           <p id='details'>Welcome back, please enter your details</p>
         </div>
-        <form className='fom' action="">
-          <NavLink id='google'> Sign in with Google</NavLink>
+        <form className='fom' action="" onSubmit={handleSubmit(submitDetails)}>
+          <NavLink id='google' ><img src={google}/><p>Sign in with Google</p></NavLink>
           <br /><br />
-          <p id='or'><img src={v1} />or<img src={v2} /></p>
+          <p id='or'><img src={v1} /> or <img src={v2}/></p>
           <br /><br />
-          <input type="email" placeholder='Email Address' />
+          <input type="email" placeholder='Email Address' {...register("email", {required:true})} key={{}}/>
           <br />
-          <input type="password" placeholder='Password' />
+          <input type="password" placeholder='Password' {...register("password", {required:true})} />
           <p id='pswrd'><NavLink>Forget Password?</NavLink></p>
           <button id='login'>Login</button>
         </form>
-        <p id='signup'>Not registered yet? <NavLink>Create an Account</NavLink></p>
+        <p id='signup'>Not registered yet? <NavLink to="/register">Create an Account</NavLink></p>
       </div>
     </div>
   )
