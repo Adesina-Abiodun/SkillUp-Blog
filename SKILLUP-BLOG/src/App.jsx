@@ -1,19 +1,13 @@
-import {Routes, Route} from 'react-router-dom'
-import Home from './Home/Home'
-import Article from './ArticlePage/Article'
-import AddPost from './AddPostPage/AddPost'
-import EditorPost from './EditorPage/EditorPost'
-import Login from './LoginPage/Login'
-import Register from './RegisterPage/Register'
-
-
-
-
-
+import { Routes, Route } from "react-router-dom";
+import Home from "./Home/Home";
+import Article from "./ArticlePage/Article";
+import AddPost from "./AddPostPage/AddPost";
+import EditorPost from "./EditorPage/EditorPost";
+import Login from "./LoginPage/Login";
+import Register from "./RegisterPage/Register";
 
 
 function App() {
-
   return (
     <div className="App">
       <Routes>
@@ -25,7 +19,7 @@ function App() {
         <Route path='/register' element={<Register/>}/>
       </Routes> 
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
