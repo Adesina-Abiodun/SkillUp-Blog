@@ -6,7 +6,6 @@ import EditorPost from "./EditorPage/EditorPost";
 import Login from "./LoginPage/Login";
 import Register from "./RegisterPage/Register";
 
-
 function App() {
   return (
     <div className="App">
