@@ -1,88 +1,152 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Helvetica, sans-serif;
-  }
- .loginpage {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-  .txtcnt{
-    background: url('./img/bgimg.svg');
-    background-position: center;
-    background-repeat: none;
-    background-size: cover;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, sans-serif;
+}
+
+.loginpage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%
+}
+
+.txtcnt {
+  background: url('./img/bgimg.svg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+  height: 100%;
+  width: 60%;
+  padding: 50px 50px;
+}
+
+.home {
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  margin-top: 50px;
+  margin-bottom: 650px;
+}
+
+.title {
+  display: block;
+  margin-top: 20px;
+  width: 90%;
+  font-weight: 700;
+  word-spacing: .7rem;
+  font-size: 3rem;
+  color: white;
+}
+
+#autor {
+    display: block;
+  color: white;
+}
+
+#olive {
+    display: block;
+  margin-top: 30px;
+  font-weight: 500;
+  font-size: 28px;
+}
+
+#lead {
+    display: block;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.form {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 50px;
+  padding-top: 100px;
+  padding-left: 150px;
+  padding-right: 50px;
+  padding-bottom: 100px;
+}
+.welcont{
     display: flex;
     flex-direction: column;
-    height: 100%;
-    width: 65%;
-    padding: 30px 20px;
-    justify-content: space-between;
-  }
-
-  .home{
-    margin-top: 100px;
+    align-items: center;
+    justify-content: center;
+}
+#welcm{
+    font-size: 3rem;
+}
+#details{
+    font-size: 1.2rem;
+}
+.fom {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+}
+#google{
+    height: 50px;
+    width: 80%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
     text-decoration: none;
-    color: white;
-  }
-  .title {
-    width: 100%;
-    font-weight: 700;
-    font-size: 2.6rem;
-    color: white;
-  }
-  #autor{
-    margin-top: 20px;
-    margin-bottom: 10px;
-    color: white;
-  }
-
-  #olive{
-    font-weight: 500;
-    font-size: 40px;
-  }
-  
-  #lead{
-    font-weight: 500;
-    font-size: 24px;
-  }
-  
-  .form {
-    width: 35%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    row-gap: 20px;
-    padding-top: 100px;
-    padding-left: 50px;
-    padding-right: 20px;
-    padding-bottom: 100px;
-  }
-  .fom{
-    width: 100%;
-  }
-  form input {
-    outline: none;
-    border: none;
-    margin-top: 25px;
-    background-color: transparent;
-    border-bottom: 2px rgba(47, 46, 65, 0.15) solid;
-  }
-  #pswrd{
-    text-align: right;
-    width: 100%;
-  }
-  #login {
-    background-color: rgba(47, 46, 65, 0.8);
-    padding: 5px;
-    border-radius: 5px;
-    width: 90%;
-    border: none;
-    outline: none;
-    color: #F3F2FF;
+    box-shadow: 2px 1px 2px 0px rgba(128, 128, 128, 0.411), -2px -1px 2px 0px rgba(128, 128, 128, 0.411);
+}
+.fom input{
+  outline: none;
+  border: none;
+  width: 85%;
+  margin-top: 30px;
+  background-color: transparent;
+  border-bottom: 2px rgba(47, 46, 65, 0.15) solid;
+}
+
+#pswrd {
+  text-align: right;
+  width: 100%;
+  padding-right: 20px;
+  margin-right: 15px;
+}
+
+#login {
+  background-color: rgba(47, 46, 65, 0.8);
+  padding: 5px;
+  border-radius: 5px;
+  width: 86%;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  color: #F3F2FF;
+}
+#signup{
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 1000px) {
+    .txtcnt{
+      display: none;
+    }
+    .form{
+        width: 100%;
+        padding: 10px 5px;
+    }
+    #or img{
+        display: none;
+    }
+    #welcm{
+        font-size: 1.8rem;
+    }
+    #details{
+        font-size: 0.7rem;
+    }
   }

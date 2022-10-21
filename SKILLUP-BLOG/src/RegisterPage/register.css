@@ -25,7 +25,7 @@ body {
   flex-direction: column;
 }
 
-a {
+.register-wrapper a {
   color: currentColor;
   margin-bottom: auto;
 }
@@ -33,7 +33,7 @@ a {
 .banner-text {
   display: flex;
   flex-direction: column;
-  height: 35%;
+  min-height: 35%;
   justify-content: space-between;
 }
 
@@ -54,6 +54,7 @@ a {
 
 .form-wrapper {
   width: 33%;
+  min-width: 400px;
   display: flex;
   flex-direction: column;
   padding: 0 45px;
@@ -74,13 +75,13 @@ a {
   font-weight: lighter;
 }
 
-form,
-button,
-p {
+.register-form form,
+.register-form button,
+.register-form p {
   margin-top: 25px;
 }
 
-form input {
+.register-form form input {
   outline: none;
   border: none;
   width: 100%;
@@ -89,7 +90,7 @@ form input {
   border-bottom: 2px rgba(47, 46, 65, 0.15) solid;
 }
 
-button {
+.register-form button {
   background-color: rgba(47, 46, 65, 0.8);
   padding: 5px;
   border-radius: 5px;
@@ -97,4 +98,10 @@ button {
   border: none;
   outline: none;
   color: #F3F2FF;
+}
+
+@media screen and (max-width: 1000px) {
+  .register-banner {
+    display: none;
+  }
 }

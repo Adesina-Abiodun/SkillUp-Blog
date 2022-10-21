@@ -1,22 +1,22 @@
 import React from 'react'
 import { useForm } from "react-hook-form"
 import { NavLink } from "react-router-dom"
+// import{ FcGoogle } from "react-icons/fa"
 import './Login.css'
 import v1 from './img/v1.svg'
 import v2 from './img/v1.svg'
-import NavBar from '../NavBar/NavBar'
 
 
 function Login() {
 
-  const {regiser, handleSubmit} = useForm()
+  // const { regiser, handleSubmit } = useForm()
 
- 
+
 
   return (
     <div className='loginpage'>
       <div className="txtcnt">
-      <NavBar/>
+        <div className='space'></div>
         <NavLink className="home" to="/">SkillUp Africa Blog</NavLink>
         <h2 className="title">The Ancient city of Rome and the history of the great city.</h2>
         <div id='autor'>
@@ -25,21 +25,22 @@ function Login() {
         </div>
       </div>
       <div className='form'>
-        <h1>Welcome Back!</h1>
-        <p>Welcome back, please enter your details</p>
+        <div className='welcont'>
+          <h1 id='welcm'>Welcome Back!</h1>
+          <p id='details'>Welcome back, please enter your details</p>
+        </div>
         <form className='fom' action="">
-          <button>Sign in with Google</button>
-          <br/><br/>
-          <p><img src={v1}/>or<img src={v2}/></p>
-          <input type="email" placeholder='Email Address'/>
-          <p><img src={v2}/></p>
-          <br/>
+          <NavLink id='google'> Sign in with Google</NavLink>
+          <br /><br />
+          <p id='or'><img src={v1} />or<img src={v2} /></p>
+          <br /><br />
+          <input type="email" placeholder='Email Address' />
+          <br />
           <input type="password" placeholder='Password' />
-          <p><img src={v2}/></p>
-          <p id='pswrd'><NavLink>Forget Password</NavLink></p>
+          <p id='pswrd'><NavLink>Forget Password?</NavLink></p>
           <button id='login'>Login</button>
         </form>
-        <p>Not registered yet? Create an Account</p> 
+        <p id='signup'>Not registered yet? <NavLink>Create an Account</NavLink></p>
       </div>
     </div>
   )
