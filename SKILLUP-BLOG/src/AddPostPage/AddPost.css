@@ -1,3 +1,4 @@
+
 .blog-title {
   width: 1240px;
   height: 90px;
@@ -27,6 +28,7 @@
   padding-left: 15px;
   background-color: #F3F2FF80;
 }
+
 
 .Blog-article {
   display: flex;
