@@ -1,4 +1,10 @@
+body {
+    margin: 0;
+    padding: 0;
+}
 .banner{
     height: 500px;
-    width: 80%;
+    width: 100%;
+    background-color: pink;
+    border-radius: 10px;
 }
