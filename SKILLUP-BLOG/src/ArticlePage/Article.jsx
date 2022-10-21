@@ -7,20 +7,21 @@ import Image3 from "./assets/Image3.svg";
 import "./Article.css";
 const Article = () => {
     return (
-        <div className="Article">
-            <div className="Art-head">
-                <div className="Art-info">
+        <div className="article">
+            <div className="art-head">
+                <div className="art-info">
                     <img src={GabielPics} alt="" />
                     <h3>Oluwatemi Gabiel</h3>
                     <p>posted on October 12, 2022</p>
-                    <button>Edit</button>
+                    
                 </div>
                 <div className="share-me">
-                    <h4>Share me</h4>
+                <button className="click">Edit</button>
+                <button className="click">Share me</button>
                 </div>
             </div>
 
-            <div className="main">
+            <div className="art-main">
                 <img src={GabielImage} alt="" />
                 <h1>
                     Ground Breaking Building is a Classic Example Architecture
@@ -51,14 +52,14 @@ const Article = () => {
 
             {/* SIMILAR ARTICLE */}
 
-            <div className="similarArticle">
+            <div className="similar-article">
                 <div className="sim-art">
                     <hr />
                     <h1>Similar Articles </h1>
                     <hr />
                 </div>
-                <div className="CommonArticle">
-                    <div className="ArtBox">
+                <div className="common-article">
+                    <div className="art-box">
                         <img src={Image1} alt="" />
                         <h2>How to build a successfully business in Nigeria</h2>
                         <p>
@@ -68,7 +69,7 @@ const Article = () => {
                         </p>
                         <button>Read More</button>
                     </div>
-                    <div className="ArtBox">
+                    <div className="art-box">
                         <img src={Image2} alt="" />
                         <h2>How to build a successfully business in Nigeria</h2>
                         <p>
@@ -78,7 +79,7 @@ const Article = () => {
                         </p>
                         <button>Read More</button>
                     </div>
-                    <div className="ArtBox">
+                    <div className="art-box">
                         <img src={Image3} alt="" />
                         <h2>How to build a successfully business in Nigeria</h2>
                         <p>
