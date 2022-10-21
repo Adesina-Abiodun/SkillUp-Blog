@@ -49,12 +49,13 @@
 
 .clicks button {
 
-    background-color: #2F2E41;
-    font-style: italic;
-    color: white;
-    border-radius: 10px;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
+  background-color: #2F2E41;
+  font-style: italic;
+  color: white;
+  border-radius: 10px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
 
 }
+
