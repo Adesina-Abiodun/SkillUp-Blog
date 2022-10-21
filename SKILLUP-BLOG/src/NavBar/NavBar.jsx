@@ -18,7 +18,7 @@ const NavBar = () => {
         </header>
 
         <nav className="nav">
-            <div className="home">
+            <div className="nav-list">
                 <ul>
                     <NavLink to={'/'}><li>Home</li></NavLink>
                     <NavLink to={'/post'}><li>Articles</li></NavLink>
