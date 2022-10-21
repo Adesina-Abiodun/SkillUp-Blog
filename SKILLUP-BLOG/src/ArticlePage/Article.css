@@ -6,17 +6,20 @@
   
   .Article{
     width: 100vw;
+    height: 100vh;
     padding: 10px 50px ;
   }
   .Art-head{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* border: 1px solid black; */
   }
   
   .Art-info{
     display: flex;
     align-items: center;
+    /* border: 1px solid black; */
     margin-bottom: 20px;
   }
   
@@ -35,7 +38,7 @@
     font-weight: 300;
     font-size: 21px;
     line-height: 25px;
-    text-align: justify;
+    /* text-align: center; */
     color: rgba(47, 46, 65, 0.5);
     font-family: 'Helvetica Neue';
   }
@@ -50,6 +53,10 @@
     color: rgba(47, 46, 65, 0.5);
     border: 1px gray solid;
     border-radius: 10px;
+    /* width: 30%;
+    height: 100%;
+    display: flex;
+    padding: 20px; */
   }
   
   .main{
@@ -72,7 +79,7 @@
     font-family: 'Helvetica Neue';
     font-style: normal;
     font-weight: 300;
-    font-size: 32px;
+    font-size: 18px;
     line-height: 39px;
     text-align: justify;
   }
@@ -111,7 +118,7 @@
     font-family: 'Helvetica Neue';
     font-style: normal;
     font-weight: 300;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 24px;
     color: #000000;
     /* align-items: center; */
@@ -120,7 +127,7 @@
   }
   
   .CommonArticle button {
-    background: #2F2E41;
+    /* background: #2F2E41; */
     border-radius: 10px;
     width: 170px;
     height: 45px;
