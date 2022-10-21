@@ -28,7 +28,7 @@ const Home = () => {
         <div className="home">
             <NavBar/> 
 
-            <div className="banner" style={{backgroundImage:article[0]}}>
+            <div className="home-banner" style={{backgroundImage:article[0]}}>
                 <h2>{article[0]}</h2>
                 <p>{article[0]}</p>
                 {article[0]}
