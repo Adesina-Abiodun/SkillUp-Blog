@@ -2,7 +2,7 @@ import {Routes, Route} from 'react-router-dom'
 import Home from './Home/Home'
 import Article from './ArticlePage/Article'
 import AddPost from './AddPostPage/AddPost'
-import EditorPost from './EditorPage/EditorPost'
+import EditorPost from './EditorPage/Editor-Modal'
 import Login from './LoginPage/Login'
 import Register from './RegisterPage/Register'
 
