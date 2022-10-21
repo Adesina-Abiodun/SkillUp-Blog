@@ -1,4 +1,4 @@
-body {
+.register-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,7 +6,7 @@ body {
   width: 100vw;
 }
 
-.register-wrapper {
+.register {
   display: flex;
   max-width: 90%;
   margin: auto;
