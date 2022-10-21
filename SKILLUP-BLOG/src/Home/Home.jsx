@@ -17,7 +17,7 @@ const Home = () => {
     const [article, setArticle] = useState([])
 
     useEffect(()=>{
-        axios.get('https://miniblogskillup.herokuapp.com', data)
+        axios.get('https://miniblogskillup.herokuapp.com')
         .then((response)=>{
             console.log(response.data)
         })
