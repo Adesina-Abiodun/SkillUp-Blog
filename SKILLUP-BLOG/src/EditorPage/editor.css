@@ -1,0 +1,179 @@
+.body {
+  font-family: Helvetica Neue;
+}
+
+.container-bg {
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.container-sm {
+  width: 1300px;
+  height: 2372px;
+  background: #fff;
+  /* display: flex; */
+  /* justify-content: center; */
+
+}
+
+.profileDiv {
+  width: 1239px;
+  height: 666px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+
+}
+
+.pictureDiv {
+  width: 372px;
+  height: 461px;
+  background: url("./img1.svg") center center / cover;
+}
+
+.uppertextDiv {
+  width: 801px;
+  height: 468px;
+  /* border: 1px solid black; */
+  margin-left: 50px;
+
+}
+
+.nameText {
+  width: 704px;
+  height: 294px;
+  text-align: start;
+
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 120px;
+  line-height: 147px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: #2F2E41;
+
+}
+
+.textChild {
+  width: 801px;
+  height: 124px;
+  text-align: start;
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  /* line-height: px; */
+
+  color: #9797A0;
+}
+
+.refsDivs {
+  width: 801px;
+  height: 32px;
+  display: flex;
+  text-align: start;
+  text-decoration: underline;
+  margin-bottom: 20px;
+
+}
+
+.href1 {
+  color: gray;
+}
+
+.href2 {
+  margin-left: 20px;
+  color: gray;
+}
+
+.vectorLine {
+  width: 1239px;
+  height: 0px;
+  left: 97px;
+  margin-bottom: 20px;
+
+  border: 2px solid rgba(47, 46, 65, 0.15);
+}
+
+.articleIntro {
+  text-align: start;
+}
+
+.grayBox {
+  width: 1240px;
+  height: 492px;
+  background: url(), #D9D9D9;
+  border-radius: 10.8672px;
+}
+
+/* space here is to implement moment.js for the time */
+.div12mins {
+  width: 180px;
+  height: 33px;
+  color: #9797A0;
+  text-align: start;
+  margin-top: 20px;
+}
+
+.text2 {
+  text-align: start;
+}
+
+.vectorLine3 {
+  width: 1239px;
+  height: 0px;
+  left: 97px;
+  margin-top: 20px;
+  border: 2px solid rgba(47, 46, 65, 0.15);
+}
+
+.cards {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-evenly;
+
+
+}
+
+.cards2 {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
+
+}
+
+.card1Div {
+  width: 300px;
+  height: 500px;
+}
+
+.cardBg {
+  width: 300px;
+  height: 250px;
+  background: url(), #D9D9D9;
+  border-radius: 10px;
+
+}
+
+.cardText {
+  text-align: start;
+
+}
+
+.readMoreBtn {
+  width: 170px;
+  height: 45px;
+  background: #000;
+  color: white;
+  border-radius: 10px;
+}
+
+.card2Div {
+  width: 300px;
+  height: 400px;
+}
