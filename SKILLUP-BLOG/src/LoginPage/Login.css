@@ -1,9 +1,9 @@
-* {
+/* * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: Helvetica, sans-serif;
-}
+} */
 
 .loginpage {
   display: flex;
@@ -54,7 +54,7 @@
 }
 
 #lead {
-    display: block;
+  display: block;
   font-weight: 500;
   font-size: 15px;
 }
@@ -94,17 +94,22 @@
 #google{
     height: 50px;
     width: 80%;
-    text-align: center;
     display: flex;
     justify-content: center;
+    column-gap:10px;
     text-decoration: none;
     align-items: center;
     box-shadow: 2px 1px 2px 0px rgba(128, 128, 128, 0.411), -2px -1px 2px 0px rgba(128, 128, 128, 0.411);
+}
+#google p{
+  text-align: center;
+  height:70%;
 }
 .fom input{
   outline: none;
   border: none;
   width: 85%;
+  height: 50px;
   margin-top: 30px;
   background-color: transparent;
   border-bottom: 2px rgba(47, 46, 65, 0.15) solid;
