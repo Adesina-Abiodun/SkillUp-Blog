@@ -1,36 +1,169 @@
-*{
-    margin: 0;
-    box-sizing: border-box;
-    padding: 0;
-  }
-  
-  .Article{
+.Article{
+  width: 100vw;
+  height: 100vh;
+  padding: 10px 50px ;
+}
+.Art-head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 1px solid black; */
+}
+
+.Art-info{
+  display: flex;
+  align-items: center;
+  /* border: 1px solid black; */
+  margin-bottom: 20px;
+}
+
+.Art-info h3{
+  color: #2F2E41 ;
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 26.4706px;
+  line-height: 32px;
+  margin: 0 15px ;
+}
+
+.Art-info p{
+  font-style: normal;
+  font-weight: 300;
+  font-size: 21px;
+  line-height: 25px;
+  /* text-align: center; */
+  color: rgba(47, 46, 65, 0.5);
+  font-family: 'Helvetica Neue';
+}
+
+.share-me{
+  font-family: 'Helvetica Neue';
+  font-style: italic;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: justify;
+  color: rgba(47, 46, 65, 0.5);
+  border: 1px gray solid;
+  border-radius: 10px;
+  /* width: 30%;
+  height: 100%;
+  display: flex;
+  padding: 20px; */
+}
+
+.main{
+  display: flex;
+  flex-direction: column;
+}
+
+.main h1{
+  color: #2F2E41;
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 49px;
+  margin: 15px 0;
+}
+
+.main p{
+  color: #9797A0;
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 39px;
+  text-align: justify;
+}
+
+
+.sim-art{
+  margin: 30px 0;
+}
+
+.sim-art h1{
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 49px;
+  color: #2F2E41;
+}
+
+
+.CommonArticle{
+  display: flex;
+  flex-basis: calc(33% - 2rem);
+  width: 100%;
+}
+
+.CommonArticle h2{
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 27.6117px;
+  line-height: 34px;
+  color: #000000;
+}
+
+.CommonArticle p{
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+  /* align-items: center; */
+  margin: 15px;
+  max-width: 372px;
+}
+
+.CommonArticle button {
+  /* background: #2F2E41; */
+  border-radius: 10px;
+  width: 170px;
+  height: 45px;
+  border: none;
+  color: white;
+  margin: 20px 0
+};
+
+.CommonArticle{
+  width: 1240px;
+  height: 616px;
+  border-radius: 25px;
+}
+
+  .Article {
     width: 100vw;
-    padding: 10px 50px ;
+    padding: 10px 50px;
   }
-  .Art-head{
+
+  .Art-head {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  
-  .Art-info{
+
+  .Art-info {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
   }
-  
-  .Art-info h3{
-    color: #2F2E41 ;
+
+  .Art-info h3 {
+    color: #2F2E41;
     font-family: 'Helvetica Neue';
     font-style: normal;
     font-weight: 300;
     font-size: 26.4706px;
     line-height: 32px;
-    margin: 0 15px ;
+    margin: 0 15px;
   }
-  
-  .Art-info p{
+
+  .Art-info p {
     font-style: normal;
     font-weight: 300;
     font-size: 21px;
@@ -39,8 +172,8 @@
     color: rgba(47, 46, 65, 0.5);
     font-family: 'Helvetica Neue';
   }
-  
-  .share-me{
+
+  .share-me {
     font-family: 'Helvetica Neue';
     font-style: italic;
     font-weight: 300;
@@ -51,13 +184,13 @@
     border: 1px gray solid;
     border-radius: 10px;
   }
-  
-  .main{
+
+  .main {
     display: flex;
     flex-direction: column;
   }
-  
-  .main h1{
+
+  .main h1 {
     color: #2F2E41;
     font-family: 'Helvetica Neue';
     font-style: normal;
@@ -66,8 +199,8 @@
     line-height: 49px;
     margin: 15px 0;
   }
-  
-  .main p{
+
+  .main p {
     color: #9797A0;
     font-family: 'Helvetica Neue';
     font-style: normal;
@@ -76,13 +209,13 @@
     line-height: 39px;
     text-align: justify;
   }
-  
-  
-  .sim-art{
+
+
+  .sim-art {
     margin: 30px 0;
   }
-  
-  .sim-art h1{
+
+  .sim-art h1 {
     font-family: 'Helvetica Neue';
     font-style: normal;
     font-weight: 700;
@@ -90,15 +223,15 @@
     line-height: 49px;
     color: #2F2E41;
   }
-  
-  
-  .CommonArticle{
+
+
+  .CommonArticle {
     display: flex;
     flex-basis: calc(33% - 2rem);
     width: 100%;
   }
-  
-  .CommonArticle h2{
+
+  .CommonArticle h2 {
     font-family: 'Helvetica Neue';
     font-style: normal;
     font-weight: 700;
@@ -106,8 +239,8 @@
     line-height: 34px;
     color: #000000;
   }
-  
-  .CommonArticle p{
+
+  .CommonArticle p {
     font-family: 'Helvetica Neue';
     font-style: normal;
     font-weight: 300;
@@ -118,7 +251,7 @@
     margin: 15px;
     max-width: 372px;
   }
-  
+
   .CommonArticle button {
     background: #2F2E41;
     border-radius: 10px;
@@ -127,15 +260,12 @@
     border: none;
     color: white;
     margin: 20px 0
-  };
-  
-  .CommonArticle{
+  }
+
+  ;
+
+  .CommonArticle {
     width: 1240px;
     height: 616px;
     border-radius: 25px;
   }
-  
-  
-  
-  
-  
