@@ -121,19 +121,73 @@
 }
 
 .CommonArticle button {
-    background: #2F2E41;
+  /* background: #2F2E41; */
+  border-radius: 10px;
+  width: 170px;
+  height: 45px;
+  border: none;
+  color: white;
+  margin: 20px 0
+};
+
+.CommonArticle{
+  width: 1240px;
+  height: 616px;
+  border-radius: 25px;
+}
+
+  .Article {
+    width: 100vw;
+    padding: 10px 50px;
+  }
+
+  .Art-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .Art-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .Art-info h3 {
+    color: #2F2E41;
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 26.4706px;
+    line-height: 32px;
+    margin: 0 15px;
+  }
+
+  .Art-info p {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 21px;
+    line-height: 25px;
+    text-align: justify;
+    color: rgba(47, 46, 65, 0.5);
+    font-family: 'Helvetica Neue';
+  }
+
+  .share-me {
+    font-family: 'Helvetica Neue';
+    font-style: italic;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: justify;
+    color: rgba(47, 46, 65, 0.5);
+    border: 1px gray solid;
     border-radius: 10px;
-    width: 170px;
-    height: 45px;
-    border: none;
-    color: white;
-    margin: 20px 0
-  };
-  
-  .CommonArticle{
-    width: 1240px;
-    height: 616px;
-    border-radius: 25px;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
   }
 
   .main h1 {
