@@ -2,6 +2,7 @@ import React from 'react'
 import { useForm } from "react-hook-form"
 import { NavLink } from "react-router-dom"
 import './Login.css'
+import axios from 'axios'
 import google from './img/google.svg'
 import v1 from './img/v1.svg'
 import v2 from './img/v1.svg'
@@ -16,8 +17,15 @@ function Login() {
     .then((result) => {
       console.log(result.data)
       alert(result.data.message);
+      alert("Login Successfull!")
+    })
+    .catch((e) => {
+      if(e.response.status == 400){
+        setErrors("Account not found");
+        alert(setErrors)
+      }
+      alert(e.response)
     });
-    
   };
 
 
