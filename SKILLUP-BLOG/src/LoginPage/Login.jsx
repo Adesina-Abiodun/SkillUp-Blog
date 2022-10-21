@@ -1,6 +1,7 @@
 import React from 'react'
 import { useForm } from "react-hook-form"
 import { NavLink } from "react-router-dom"
+// import{ FcGoogle } from "react-icons/fa"
 import './Login.css'
 import v1 from './img/v1.svg'
 import v2 from './img/v1.svg'
@@ -8,7 +9,7 @@ import v2 from './img/v1.svg'
 
 function Login() {
 
-  const { regiser, handleSubmit } = useForm()
+  // const { regiser, handleSubmit } = useForm()
 
 
 
@@ -24,20 +25,22 @@ function Login() {
         </div>
       </div>
       <div className='form'>
-        <h1>Welcome Back!</h1>
-        <p>Welcome back, please enter your details</p>
+        <div className='welcont'>
+          <h1 id='welcm'>Welcome Back!</h1>
+          <p id='details'>Welcome back, please enter your details</p>
+        </div>
         <form className='fom' action="">
-          <button>Sign in with Google</button>
+          <NavLink id='google'> Sign in with Google</NavLink>
           <br /><br />
-          <p><img src={v1} />or<img src={v2} /></p>
+          <p id='or'><img src={v1} />or<img src={v2} /></p>
           <br /><br />
           <input type="email" placeholder='Email Address' />
           <br />
           <input type="password" placeholder='Password' />
-          <p id='pswrd'><NavLink>Forget Password</NavLink></p>
+          <p id='pswrd'><NavLink>Forget Password?</NavLink></p>
           <button id='login'>Login</button>
         </form>
-        <p>Not registered yet? Create an Account</p>
+        <p id='signup'>Not registered yet? <NavLink>Create an Account</NavLink></p>
       </div>
     </div>
   )
