@@ -15,6 +15,7 @@ function Login() {
   return (
     <div className='loginpage'>
       <div className="txtcnt">
+        <div className='space'></div>
         <NavLink className="home" to="/">SkillUp Africa Blog</NavLink>
         <h2 className="title">The Ancient city of Rome and the history of the great city.</h2>
         <div id='autor'>
@@ -29,6 +30,7 @@ function Login() {
           <button>Sign in with Google</button>
           <br /><br />
           <p><img src={v1} />or<img src={v2} /></p>
+          <br /><br />
           <input type="email" placeholder='Email Address' />
           <br />
           <input type="password" placeholder='Password' />
