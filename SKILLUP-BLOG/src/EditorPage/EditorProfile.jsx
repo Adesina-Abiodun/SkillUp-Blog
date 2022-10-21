@@ -24,6 +24,9 @@ function EditorProfile() {
                   <a href="#" className="href2">
                     Edit Profile
                   </a>
+                  <a href="#" className="href2">
+                    Add Post
+                  </a>
                 </div>
               </div>
             </div>
