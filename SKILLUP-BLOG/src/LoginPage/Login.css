@@ -136,4 +136,17 @@
     .txtcnt{
       display: none;
     }
+    .form{
+        width: 100%;
+        padding: 10px 5px;
+    }
+    #or img{
+        display: none;
+    }
+    #welcm{
+        font-size: 1.8rem;
+    }
+    #details{
+        font-size: 0.7rem;
+    }
   }

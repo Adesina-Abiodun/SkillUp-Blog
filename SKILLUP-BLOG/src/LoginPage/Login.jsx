@@ -32,7 +32,7 @@ function Login() {
         <form className='fom' action="">
           <NavLink id='google'> Sign in with Google</NavLink>
           <br /><br />
-          <p><img src={v1} />or<img src={v2} /></p>
+          <p id='or'><img src={v1} />or<img src={v2} /></p>
           <br /><br />
           <input type="email" placeholder='Email Address' />
           <br />
