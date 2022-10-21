@@ -12,6 +12,7 @@ const AddPost = () => {
       .post("https://dashboard.heroku.com/apps/miniblogskillup", data)
       .then((response)=>{
         alert(response.data.message)
+        console.log('posted')
       })
     };
 
