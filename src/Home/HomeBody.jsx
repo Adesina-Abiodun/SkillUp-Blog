@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from 'axios';
 import momemt from 'moment'
-import './Home.css'
+import './HomeBody.css'
 
 const Home = () => {
     const [posts, setposts] = useState([]);
