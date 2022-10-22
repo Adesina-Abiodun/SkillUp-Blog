@@ -113,7 +113,7 @@
   border-bottom: 2px rgba(47, 46, 65, 0.15) solid;
 }
 
-#pswrd {
+#psswrd {
   text-align: right;
   width: 100%;
   padding-right: 20px;
@@ -136,7 +136,7 @@
 }
 
 @media screen and (max-width: 1000px) {
-    .txtcnt{
+    .left{
       display: none;
     }
     .form{
