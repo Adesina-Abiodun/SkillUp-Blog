@@ -11,9 +11,21 @@ import v2 from './img/v1.svg'
 function Login() {
 
   const { register, handleSubmit } = useForm();
+  const {access, setAccess} = useState([
+
+    {
+      "token": "",
+      isLoggedIn: true,
+    }
+  ]);
 
   const submitDetails = (data) => {
-    axios.post("https://dashboard.heroku.com/apps/miniblogskillup/api/users/login", data)
+    axios.post("https://miniblogskillup.herokuapp.com/api/users/login", data, {
+      headers:{
+        "content-type":"application/json",
+        "Authorization": access.token
+      }
+    })
     .then((result) => {
       console.log(result.data)
       alert(result.data.message);
