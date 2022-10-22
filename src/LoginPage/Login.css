@@ -110,7 +110,7 @@
   border-bottom: 2px rgba(47, 46, 65, 0.15) solid;
 }
 
-#logpswrd {
+#pswrd {
   text-align: right;
   width: 100%;
   padding-right: 20px;
@@ -133,7 +133,7 @@
 }
 
 @media screen and (max-width: 1000px) {
-    .logtxtcnt{
+    .txtcnt{
       display: none;
     }
     .logform{
