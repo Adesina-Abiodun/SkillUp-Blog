@@ -1,9 +1,4 @@
-/* * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: Helvetica, sans-serif;
-} */
+
 
 .loginpage {
   display: flex;
@@ -12,7 +7,7 @@
   width: 100%
 }
 
-.txtcnt {
+.logtxtcnt {
   background: url('./img/bgimg.svg');
   background-position: center;
   background-size: cover;
@@ -22,7 +17,7 @@
   padding: 50px 50px;
 }
 
-.home {
+.loghome {
   display: block;
   text-decoration: none;
   color: white;
@@ -31,7 +26,7 @@
   margin-bottom: 650px;
 }
 
-.title {
+.logtitle {
   display: block;
   margin-top: 20px;
   width: 90%;
@@ -41,25 +36,25 @@
   color: white;
 }
 
-#autor {
+#logautor {
     display: block;
   color: white;
 }
 
-#olive {
+#logolive {
     display: block;
   margin-top: 30px;
   font-weight: 500;
   font-size: 28px;
 }
 
-#lead {
+#loglead {
   display: block;
   font-weight: 500;
   font-size: 15px;
 }
 
-.form {
+.logform {
   width: 40%;
   height: 100%;
   display: flex;
@@ -72,26 +67,26 @@
   padding-right: 50px;
   padding-bottom: 100px;
 }
-.welcont{
+.logwelcont{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-#welcm{
+#logwelcm{
     font-size: 3rem;
 }
-#details{
+#logdetails{
     font-size: 1.2rem;
 }
-.fom {
+.logfom {
   width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
   row-gap: 10px;
 }
-#google{
+#loggoogle{
     height: 50px;
     width: 80%;
     display: flex;
@@ -101,11 +96,11 @@
     align-items: center;
     box-shadow: 2px 1px 2px 0px rgba(128, 128, 128, 0.411), -2px -1px 2px 0px rgba(128, 128, 128, 0.411);
 }
-#google p{
+#loggoogle p{
   text-align: center;
   height:70%;
 }
-.fom input{
+.logfom input{
   outline: none;
   border: none;
   width: 85%;
@@ -115,14 +110,14 @@
   border-bottom: 2px rgba(47, 46, 65, 0.15) solid;
 }
 
-#pswrd {
+#logpswrd {
   text-align: right;
   width: 100%;
   padding-right: 20px;
   margin-right: 15px;
 }
 
-#login {
+#loglogin {
   background-color: rgba(47, 46, 65, 0.8);
   padding: 5px;
   border-radius: 5px;
@@ -133,25 +128,25 @@
   outline: none;
   color: #F3F2FF;
 }
-#signup{
+#logsignup{
     font-size: 1.2rem;
 }
 
 @media screen and (max-width: 1000px) {
-    .txtcnt{
+    .logtxtcnt{
       display: none;
     }
-    .form{
+    .logform{
         width: 100%;
         padding: 10px 5px;
     }
-    #or img{
+    #logor img{
         display: none;
     }
-    #welcm{
+    #logwelcm{
         font-size: 1.8rem;
     }
-    #details{
+    #logdetails{
         font-size: 0.7rem;
     }
   }

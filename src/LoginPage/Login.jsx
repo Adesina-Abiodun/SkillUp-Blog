@@ -43,32 +43,32 @@ function Login() {
 
   return (
     <div className='loginpage'>
-      <div className="txtcnt">
-        <div className='space'></div>
-        <NavLink className="home" to="/">SkillUp Africa Blog</NavLink>
-        <h2 className="title">The Ancient city of Rome and the history of the great city.</h2>
-        <div id='autor'>
-          <h3 id='olive'>Olive Junior</h3>
-          <h4 id='lead'>Lead Writer, SkillUp Africa</h4>
+      <div className="logtxtcnt">
+        <div className='logspace'></div>
+        <NavLink className="loghome" to="/">SkillUp Africa Blog</NavLink>
+        <h2 className="logtitle">The Ancient city of Rome and the history of the great city.</h2>
+        <div id='logautor'>
+          <h3 id='logolive'>Olive Junior</h3>
+          <h4 id='loglead'>Lead Writer, SkillUp Africa</h4>
         </div>
       </div>
-      <div className='form'>
-        <div className='welcont'>
-          <h1 id='welcm'>Welcome Back!</h1>
-          <p id='details'>Welcome back, please enter your details</p>
+      <div className='logform'>
+        <div className='logwelcont'>
+          <h1 id='logwelcm'>Welcome Back!</h1>
+          <p id='logdetails'>Welcome back, please enter your details</p>
         </div>
-        <form className='fom' action="" onSubmit={handleSubmit(submitDetails)}>
-          <NavLink id='google' ><img src={google}/><p>Sign in with Google</p></NavLink>
+        <form className='logfom' action="" onSubmit={handleSubmit(submitDetails)}>
+          <NavLink id='loggoogle' ><img src={google}/><p>Sign in with Google</p></NavLink>
           <br /><br />
-          <p id='or'><img src={v1} /> or <img src={v2}/></p>
+          <p id='logor'><img src={v1} /> or <img src={v2}/></p>
           <br /><br />
           <input type="email" placeholder='Email Address' {...register("email", {required:true})} key={{}}/>
           <br />
           <input type="password" placeholder='Password' {...register("password", {required:true})} />
-          <p id='pswrd'><NavLink>Forget Password?</NavLink></p>
-          <button id='login'>Login</button>
+          <p id='logpswrd'><NavLink>Forget Password?</NavLink></p>
+          <button id='loglogin'>Login</button>
         </form>
-        <p id='signup'>Not registered yet? <NavLink to="/register">Create an Account</NavLink></p>
+        <p id='logsignup'>Not registered yet? <NavLink to="/register">Create an Account</NavLink></p>
       </div>
     </div>
   )
