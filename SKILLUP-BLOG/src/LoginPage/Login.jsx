@@ -15,7 +15,7 @@ function Login() {
   const submitDetails = (data) => {
     axios.post("https://dashboard.heroku.com/apps/miniblogskillup/api/users/login", data)
     .then((result) => {
-      console.log(result.data)
+      console.log(result)
       alert(result.data.message);
       alert("Login Successfull!")
     })
