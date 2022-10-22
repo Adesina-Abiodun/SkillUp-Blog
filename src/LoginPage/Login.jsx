@@ -29,7 +29,6 @@ function Login() {
     .then((result) => {
       console.log(result)
       alert(result.data.message);
-      alert("Login Successfull!")
     })
     .catch((e) => {
       if(e.response.status == 400){
