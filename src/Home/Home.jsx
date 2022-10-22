@@ -26,7 +26,7 @@ const Home = () => {
 
 
     return ( 
-        <div className="home">
+        <div className="home-overall">
             <NavBar/> 
 
             <div className="home-banner" style={{backgroundImage:article[0]}}>

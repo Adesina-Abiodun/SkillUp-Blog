@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from 'axios';
 import moment from "moment/moment";
 import './HomeBody.css'
+import { Link } from "react-router-dom";
 
 const Home = () => {
     const [posts, setposts] = useState([]);
@@ -17,14 +18,16 @@ const Home = () => {
         <div>
             <h1 className="home-article-header">Latest Articles</h1>
             <div className="home-blogpost">
-                {posts?.slice(0,9).map((posts) => {
+                {posts?.slice(0,9).map(({id, url, date, title}) => {
                     return(
-                        <div className="home-blogcontainer" key={posts._id}>
-                            <div ><img className="home-articleimage" src={posts.url} alt="" /></div>
-                            <p className="home-date">{moment(posts.date).startOf('hour').fromNow()}</p>
-                            <h4 className="home-articletitle">{posts.title}</h4>
-                            <p className="home-mainarticle">{posts.thumbnailUrl}</p>
-                        </div>
+                        <Link className='home-link' to={``}>
+                            <div className="home-blogcontainer" key={id}>
+                                <div ><img className="home-articleimage" src={url} alt="" /></div>
+                                <p className="home-date">{moment(date).startOf('hour').fromNow()}</p>
+                                <h4 className="home-articletitle">{title}</h4>
+                                <p className="home-mainarticle">{title.slice(0,60)}....</p>
+                            </div>
+                        </Link>
                     )
                 })}
             </div>
