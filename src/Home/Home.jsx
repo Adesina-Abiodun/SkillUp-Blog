@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import NavBar from "../NavBar/NavBar";
+import HomeBody from "../Home/HomeBody"
 import './Home.css'
 import axios from 'axios';
 
@@ -32,7 +33,9 @@ const Home = () => {
                 <h2>{article[0]}</h2>
                 <p>{article[0]}</p>
                 {article[0]}
-            </div> 
+            </div>
+
+            <HomeBody /> 
 
         </div>
      );
