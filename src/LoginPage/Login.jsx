@@ -27,7 +27,7 @@ function Login() {
       }
     })
     .then((result) => {
-      console.log(result.data)
+      console.log(result)
       alert(result.data.message);
       alert("Login Successfull!")
     })
