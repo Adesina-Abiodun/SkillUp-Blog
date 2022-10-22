@@ -48,7 +48,7 @@ function Login() {
         <div className='logspace'></div>
         <NavLink className="loghome" to="/">SkillUp Africa Blog</NavLink>
         <h2 className="logtitle">The Ancient city of Rome and the history of the great city.</h2>
-        <div id='logautor'>
+        <div id='loautor'>
           <h3 id='logolive'>Olive Junior</h3>
           <h4 id='loglead'>Lead Writer, SkillUp Africa</h4>
         </div>
