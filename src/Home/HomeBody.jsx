@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from 'axios';
-import momemt from 'moment'
+import moment from "moment/moment";
 import './HomeBody.css'
 
 const Home = () => {
