@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .register-wrapper {
   display: flex;
   justify-content: center;
@@ -12,6 +18,7 @@
   margin: auto;
   justify-content: center;
   min-height: 600px;
+  box-shadow: 0 20px 80px 15px gray;
 }
 
 .register-banner {
@@ -20,9 +27,10 @@
   background-position: center;
   padding: 45px;
   color: #F3F2FF;
-  width: auto;
+  width: 60%;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 20px 80px 10px gray;
 }
 
 .register-wrapper a {
@@ -53,12 +61,11 @@
 }
 
 .form-wrapper {
-  width: 33%;
-  min-width: 400px;
+  width: 40%;
+  min-width: 350px;
   display: flex;
-  flex-direction: column;
-  padding: 0 45px;
   background-color: #F3F2FF;
+  box-shadow: 0 20px 80px 10px gray;
 }
 
 .register-form {
@@ -67,6 +74,7 @@
   margin: auto;
   margin-top: 100px;
   height: 50%;
+  width: 75%;
   color: #2F2E41;
 }
 
@@ -90,6 +98,11 @@
   border-bottom: 2px rgba(47, 46, 65, 0.15) solid;
 }
 
+.register-form form input:invalid~p {
+  color: red;
+  display: block;
+}
+
 .register-form button {
   background-color: rgba(47, 46, 65, 0.8);
   padding: 5px;
@@ -98,6 +111,11 @@
   border: none;
   outline: none;
   color: #F3F2FF;
+}
+
+#text {
+  color: red;
+  margin: 0;
 }
 
 @media screen and (max-width: 1000px) {
