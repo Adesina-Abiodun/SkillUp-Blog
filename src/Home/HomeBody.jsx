@@ -5,9 +5,17 @@ import './HomeBody.css'
 import { Link } from "react-router-dom";
 
 const Home = () => {
-    const [posts, setposts] = useState([]);
+    const [posts, setposts] = useState({
+        token: "",
+        isLoggedIn: true
+    });
     useEffect(() => {
-        axios.get('https://jsonplaceholder.typicode.com/photos')
+        axios.get('https://jsonplaceholder.typicode.com/photos', {
+            headers: {
+                "content-type": "application/json",
+                "Authorization": access.token,
+            },
+        })
         .then(response => {
             console.log(response.data);
             setposts(response.data)
@@ -20,7 +28,7 @@ const Home = () => {
             <div className="home-blogpost">
                 {posts?.slice(0,9).map(({id, url, date, title}) => {
                     return(
-                        <Link className='home-link' to={``}>
+                        <Link className='home-link' to={`/posts/${id}`}>
                             <div className="home-blogcontainer" key={id}>
                                 <div ><img className="home-articleimage" src={url} alt="" /></div>
                                 <p className="home-date">{moment(date).startOf('hour').fromNow()}</p>
