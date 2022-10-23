@@ -73,7 +73,7 @@
     color: #9797A0;
   }
   
-  .editorProfile-refsDivs {
+  .editorProfile-btnDivs {
     width: 801px;
     height: 32px;
     display: flex;
@@ -83,13 +83,29 @@
   
   }
   
-  .editorProfile-href1 {
+  .editorProfile-btn1 {
     color: gray;
+    padding: none;
+    border: none;
+    background: none;
+    font-size: medium;
   }
   
-  .editorProfile-href2 {
+  .editorProfile-btn2 {
     margin-left: 20px;
     color: gray;
+    padding: none;
+    border: none;
+    background: none;
+    font-size: medium;
+  }
+  .editorProfile-btn3 {
+    margin-left: 20px;
+    color: gray;
+    padding: none;
+    border: none;
+    background: none;
+    font-size: medium;
   }
   
   .editorProfile-vectorLine {
