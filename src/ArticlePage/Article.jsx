@@ -5,19 +5,27 @@ import Image1 from "./assets/Image1.svg";
 import Image2 from "./assets/Image2.svg";
 import Image3 from "./assets/Image3.svg";
 import "./Article.css";
-
+import NavBar from '../NavBar/NavBar'
+import { Link } from "react-router-dom";
+import {useParams} from "react-router-dom"
+import {useState} from "react";
 const Article = () => {
+  
+    const {id} = useParams()
     return (
-        <div className="Article">
-            <div className="Art-head">
-                <div className="Art-info">
+        <div>
+         <NavBar />
+        <div className="article">
+            <div className="art-head">
+                <div className="art-info">
                     <img src={GabielPics} alt="" />
                     <h3>Oluwatemi Gabiel</h3>
                     <p>posted on October 12, 2022</p>
-                    <button>Edit</button>
                 </div>
+
                 <div className="share-me">
-                    <h4>Share me</h4>
+               <Link to='/Editor/:id'><button className='click'>Edit</button></Link>
+                    <button className='click'>Share me</button>
                 </div>
             </div>
 
@@ -58,8 +66,8 @@ const Article = () => {
                     <h1>Similar Articles </h1>
                     <hr />
                 </div>
-                <div className="CommonArticle">
-                    <div className="ArtBox">
+                <div className="commonArticle">
+                    <div className="artBox">
                         <img src={Image1} alt="" />
                         <h2>How to build a successfully business in Nigeria</h2>
                         <p>
@@ -67,9 +75,9 @@ const Article = () => {
                             elit. Iaculis urna imperdiet netus nibh at fermentum
                             mattis. Amet adipiscing
                         </p>
-                        <button>Read More</button>
+                        <button className='btn'>Read More</button>
                     </div>
-                    <div className="ArtBox">
+                    <div className="artBox">
                         <img src={Image2} alt="" />
                         <h2>How to build a successfully business in Nigeria</h2>
                         <p>
@@ -77,9 +85,11 @@ const Article = () => {
                             elit. Iaculis urna imperdiet netus nibh at fermentum
                             mattis. Amet adipiscing
                         </p>
-                        <button>Read More</button>
+                        <button className='btn'>Read More</button>
                     </div>
-                    <div className="ArtBox">
+
+                    <Link to={'/post/:id'}>
+                    <div className="artBox">
                         <img src={Image3} alt="" />
                         <h2>How to build a successfully business in Nigeria</h2>
                         <p>
@@ -87,10 +97,12 @@ const Article = () => {
                             elit. Iaculis urna imperdiet netus nibh at fermentum
                             mattis. Amet adipiscing
                         </p>
-                        <button>Read More</button>
+                        <button className='btn'>Read More -{id}</button>
                     </div>
+                    </Link>
                 </div>
             </div>
+        </div>
         </div>
     );
 };
