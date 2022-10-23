@@ -40,28 +40,25 @@
   width: 95%;
   font-weight: 700;
   word-spacing: .7rem;
-  line-height: 2.8rem;
   font-size: 2.8rem;
   color: white;
-  height: 20px;
 }
 
 #logautor {
   color: white;
-  height: 40px;
-  margin-top: 50px;
+  margin-top: 30px;
   margin-left: 50px;
   margin-bottom: 40px;
 }
 
 #logolive {
-  height: 10px;
+  display: block;
   font-weight: 500;
   font-size: 28px;
 }
 
 #loglead {
-  height: 10px;
+  display: block;
   font-weight: 500;
   font-size: 15px;
 }
@@ -82,7 +79,6 @@
 }
 #logwelcm{
     font-size: 3rem;
-    height: 10px;
 }
 #logdetails{
     font-size: 1.2rem;

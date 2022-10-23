@@ -70,7 +70,7 @@ function Login() {
           </form>
           <p id='logsignup'>Not registered yet? <NavLink to="/register">Create an Account</NavLink></p>
         </div>
-      </div>
+``      </div>
     </div>
   )
 
