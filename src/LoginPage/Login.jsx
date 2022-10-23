@@ -44,32 +44,32 @@ function Login() {
 
   return (
     <div className='loginpage'>
-      <div className="logtxtcnt">
-        <div className='logspace'></div>
-        <NavLink className="loghome" to="/">SkillUp Africa Blog</NavLink>
-        <h2 className="logtitle">The Ancient city of Rome and the history of the great city.</h2>
-        <div id='loautor'>
-          <h3 id='logolive'>Olive Junior</h3>
-          <h4 id='loglead'>Lead Writer, SkillUp Africa</h4>
+      <div className='logleft'>
+        <div className="logtxtcnt">
+          <div className='logspace'></div>
+          <NavLink className="loghome" to="/">SkillUp Africa Blog</NavLink>
+          <h2 className="logtitle">The Ancient city of Rome and the history of the great city.</h2>
+          <div id='logautor'>
+            <h3 id='logolive'>Olive Junior</h3>
+            <h4 id='loglead'>Lead Writer, SkillUp Africa</h4>
+          </div>
         </div>
       </div>
-      <div className='logform'>
-        <div className='logwelcont'>
-          <h1 id='logwelcm'>Welcome Back!</h1>
-          <p id='logdetails'>Welcome back, please enter your details</p>
+      <div className='logright'>
+        <div className='logform'>
+          <div className='logwelcont'>
+            <h1 id='logwelcm'>Welcome Back!</h1>
+            <p id='logdetails'>Welcome back, please enter your details</p>
+          </div>
+          <form className='logfom' action="" onSubmit={handleSubmit(submitDetails)}>
+            <input type="email" placeholder='Email Address' {...register("email", {required:true})} key={{}}/>
+            <br />
+            <input type="password" placeholder='Password' {...register("password", {required:true})} />
+            <p id='logpswrd'><NavLink>Forget Password?</NavLink></p>
+            <button id='login'>Login</button>
+          </form>
+          <p id='logsignup'>Not registered yet? <NavLink to="/register">Create an Account</NavLink></p>
         </div>
-        <form className='logfom' action="" onSubmit={handleSubmit(submitDetails)}>
-          <NavLink id='loggoogle' ><img src={google}/><p>Sign in with Google</p></NavLink>
-          <br /><br />
-          <p id='logor'><img src={v1} /> or <img src={v2}/></p>
-          <br /><br />
-          <input type="email" placeholder='Email Address' {...register("email", {required:true})} key={{}}/>
-          <br />
-          <input type="password" placeholder='Password' {...register("password", {required:true})} />
-          <p id='logpswrd'><NavLink>Forget Password?</NavLink></p>
-          <button id='loglogin'>Login</button>
-        </form>
-        <p id='logsignup'>Not registered yet? <NavLink to="/register">Create an Account</NavLink></p>
       </div>
     </div>
   )
