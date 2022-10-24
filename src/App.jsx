@@ -6,6 +6,7 @@ import EditorPost from "./EditorPage/EditorPost";
 import Login from "./LoginPage/Login";
 import Register from "./RegisterPage/Register";
 import Articles from "./ArticlesPage/Articles";
+import {contextProvider} from './Context';
 
 function App() {
   return (
