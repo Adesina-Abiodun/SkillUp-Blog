@@ -11,7 +11,8 @@ function EditorProfile() {
 
   return (
     <div>
-       {openModal && <EditorModal setOpenModal={setOpenModal} />}
+      {openModal && <EditorModal setOpenModal={setOpenModal} />}
+        
       <div className="editorProfile-container-bg">
         <div className="editorProfile-container-sm">
           <section className="editorProfile-section1">
