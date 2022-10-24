@@ -4,9 +4,7 @@ import { NavLink } from "react-router-dom"
 import {useState} from 'react'
 import './Login.css'
 import axios from 'axios'
-import google from './img/google.svg'
-import v1 from './img/v1.svg'
-import v2 from './img/v1.svg'
+
 
 
 function Login() {
@@ -70,7 +68,7 @@ function Login() {
           </form>
           <p id='logsignup'>Not registered yet? <NavLink to="/register">Create an Account</NavLink></p>
         </div>
-      </div>
+``      </div>
     </div>
   )
 
