@@ -47,13 +47,19 @@
   display: flex;
   justify-content: space-around;
 }
-.click{
+.share-me .click{
   padding: 5px 20px;
   border-radius: 5px;
   border: none;
   background-color: #2F2E41;
   color: white;
   cursor: pointer;
+  transition: all 0.5s linear;
+}
+.share-me .click:hover{
+  background-color:darkslategrey;
+  box-shadow: 0 0 5px gray;
+  /* width: 8rem; */
 }
 
 .main{
@@ -105,7 +111,55 @@
   border-radius: 25px;
 }
 
+.btn3{
+  border-radius: 10px;
+  background-color: #2F2E41;
+  width: 170px;
+  height: 45px;
+  border: none;
+  color: white;
+  margin: 20px 0;
+  cursor: pointer;
+  transition: all 0.5s linear;
+}
+.btn2{
+  border-radius: 10px;
+  background-color: #2F2E41;
+  width: 170px;
+  height: 45px;
+  border: none;
+  color: white;
+  margin: 20px 0;
+  cursor: pointer;
+  transition: all 0.5s linear;
+}
+.btn1{
+  border-radius: 10px;
+  background-color: #2F2E41;
+  width: 170px;
+  height: 45px;
+  border: none;
+  color: white;
+  margin: 20px 0;
+  cursor: pointer;
+  transition: all 0.5s linear;
+}
 
+.btn2:hover{
+  background-color:darkslategrey;
+  box-shadow: 0 0 5px gray;
+  width: 10rem;
+}
+.btn1:hover{
+  background-color:darkslategrey;
+  box-shadow: 0 0 5px gray;
+  width: 10rem;
+}
+.btn3:hover{
+  background-color:darkslategrey;
+  box-shadow: 0 0 5px gray;
+  width: 10rem;
+}
 .commonArticle h2{
   font-family: 'Helvetica Neue';
   font-style: normal;
@@ -127,18 +181,52 @@
   max-width: 372px;
 }
 
-.commonArticle .btn {
-  /* background: #2F2E41; */
+.mymodal{
+  width: 60vw;
+  height: 80vh;
+  /* border: 1px solid black; */
+  position: absolute;
+  left: 25vw;
+  top: 25vh;
+  background-color: white;
   border-radius: 10px;
-  background-color: #2F2E41;
-  width: 170px;
-  height: 45px;
-  border: none;
+  text-align: center;
+  /* display: none; */
+}
+
+.title {
+  border-radius: 5px;
+  border: 2px solid rgba(47, 46, 65, 0.15);
+  font-size: 20px;
+  padding-left: 15px;
+  background-color: #F3F2FF80;
+  width: 83%;
+  height: 30px;
+  outline: none;
+}
+
+.content{
+  outline: none;
+  border-radius: 10px;
+  padding: 10px 10px;
+  background-color: #F3F2FF80;
+}
+
+.mypost {
+  width: 100px;
+  padding: 12px;
+  /* margin-right: 1500px; */
+  margin-top: 10px;
+  background-color: black;
   color: white;
-  margin: 20px 0;
+  border-radius: 10px;
+  margin-right: 10px;
   cursor: pointer;
-  transition: all 2s linear;
-};
-.commonArticle .btn:hover{
-  background: red;
+  border: none;
+  transition: all 0.5s linear;
+}
+.mypost:hover{
+  background-color:darkslategrey;
+  box-shadow: 0 0 5px gray;
+  width: 8rem;
 }
