@@ -15,6 +15,7 @@
 .register {
   display: flex;
   max-width: 90%;
+  width: 90%;
   margin: auto;
   justify-content: center;
   min-height: 600px;
