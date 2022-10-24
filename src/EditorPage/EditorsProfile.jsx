@@ -17,16 +17,12 @@ function EditorProfile() {
                   Twitter @oluatemisam or send him an email:
                   gabiel@skillup.africa
                 </p>
-                <div className="editorProfile-refsDivs">
-                  <a href="#" className="editorProfile-href1">
+                <div className="editorProfile-btnDivs">
+                  <button className="editorProfile-btn1">
                     120 Articles Posted
-                  </a>
-                  <a href="#" className="editorProfile-href2">
-                    Edit Profile
-                  </a>
-                  <a href="#" className="editorProfile-href2">
-                    Add Post
-                  </a>
+                  </button>
+                  <button className="editorProfile-btn2">Edit Profile</button>
+                  <button className="editorProfile-btn3">Add Post</button>
                 </div>
               </div>
             </div>
