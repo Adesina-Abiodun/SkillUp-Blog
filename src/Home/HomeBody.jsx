@@ -5,17 +5,9 @@ import './HomeBody.css'
 import { Link } from "react-router-dom";
 
 const Home = () => {
-    const [posts, setposts] = useState({
-        token: "",
-        isLoggedIn: true
-    });
+    const [posts, setposts] = useState([]);
     useEffect(() => {
-        axios.get('https://jsonplaceholder.typicode.com/photos', {
-            headers: {
-                "content-type": "application/json",
-                "Authorization": access.token,
-            },
-        })
+        axios.get('https://jsonplaceholder.typicode.com/photos')
         .then(response => {
             console.log(response.data);
             setposts(response.data)
