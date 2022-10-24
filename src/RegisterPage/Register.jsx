@@ -2,36 +2,23 @@ import "./register.css"
 import axios from "axios"
 import { NavLink } from "react-router-dom"
 import { useForm } from "react-hook-form"
-import { useState } from "react"
 
 
-const Register = (formData) => {
-  const { register, handleSubmit, formState: { errors } } = useForm({});
+const Register = () => {
+  const { watch, register, handleSubmit, formState: { errors } } = useForm({});
 
-  // const [confirmPassword, setConfirmPassword] = useState()
-  const onSubmit = async (data) => {
+  const onSubmit = (data) => {
 
-    formData = data
-    if (formData.password !== formData.confirmPassword) {
-      return alert("Password does not match")
-    } else {
-      // console.log(data);
-      // console.log(formData);
-      // console.log(formData.password);
-      // console.log(formData.confirmPassword);
-
-      axios
-        .post("https://miniblogskillup.herokuapp.com/api/users/register", data, {
-          headers: {
-            "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": true,
-          },
-        })
-        .then((response) => {
-          console.log(response.data.message);
-        });
-
-    }
+    axios
+      .post("https://miniblogskillup.herokuapp.com/api/users/register", data, {
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": true,
+        },
+      })
+      .then((response) => {
+        console.log(response.data.message);
+      });
   };
 
 
@@ -66,11 +53,12 @@ const Register = (formData) => {
 
               <input type="text" placeholder="Name"
                 {...register("username", {
-                  required: true, maxLength: 20
+                  required: true,
+                  maxLength: 30
                 })}
               />
               <p id="text">{errors.username?.type === "required" && "Your name is required"}</p>
-              <p id="text">{errors.username?.type === "maxLength" && "Your name is should not be more than 10 characters long"}</p>
+              <p id="text">{errors.username?.type === "maxLength" && "Your name is should not be more than 30 characters long"}</p>
 
 
               <input type="email" placeholder="Email Address"
@@ -95,9 +83,13 @@ const Register = (formData) => {
               <input type="password" placeholder="Confirm Password"
                 {...register("confirmPassword", {
                   required: true,
-                  pattern: formData.password
+                  validate: (value) => {
+                    if (watch('password') != value) {
+                      return "Your passwords do no match";
+                    }
+                  },
                 })} />
-              {errors.confirmPassword?.type === "pattern" && "Password do not match"}
+              <p id="text">{errors.confirmPassword?.type === "validate" && "Password does not match"}</p>
 
 
               <br />
