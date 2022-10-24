@@ -1,13 +1,14 @@
-import React from 'react'
-import './EditorModal.css'
+import React from 'react';
+import './EditorModal.css';
 import { useForm } from "react-hook-form";
 import axios from "axios";
 
 
 
 
-function EditorModal() {
+function EditorModal({setOpenModal}) {
     const { register, handleSubmit } = useForm()
+
     const submitData = (data) => {
     console.log(data)
     axios
@@ -21,28 +22,32 @@ function EditorModal() {
 
 
   return (
-    <div>
-          <dialog open className='dialogbox-Modal'>
+      
+          <div className='dialogContainer'>
+
+            <dialog open className='dialogbox-Modal' > 
               <h3>EDIT YOUR PROFILE </h3>
+              <br />
             <form onSubmit={handleSubmit(submitData)}>  
-              <div>
+              <div className='put'>
             <input type="text" name='edit'{...register("edit")} placeholder='Edit your name'/>
               </div>  
               <br />
               <br />
-            <div className='bio'>
+            <div className='bioModal'>
             <textarea name="Bio" {...register("Bio")} id="" cols="80" rows="10" placeholder='Edit your Bio' ></textarea>
                   </div>
                   <br />
             <div className='btnModal'>
                     <button type='submit'>OK</button>&nbsp;&nbsp;&nbsp;
-                    <button type='submit'>CANCEL</button>
+                    <button type='submit' onClick={()=>setOpenModal(false)}>CANCEL</button>
             </div>
             </form>
-      </dialog>
-    </div>
+              </dialog>
+              </div>
+    
   )
-}
+} 
 
 export default EditorModal;
 

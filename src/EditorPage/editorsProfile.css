@@ -1,6 +1,7 @@
 
 .body {
     font-family: Helvetica Neue;
+    position: relative;
   }
   
   .editorProfile-container-bg {
@@ -81,6 +82,18 @@
     text-decoration: underline;
     margin-bottom: 20px;
   
+  }
+
+  .btnEditpro{
+    border: none;
+    background-color: white;
+    transform: translateY(-7px);
+    margin-left: 10px;
+    color: gray;
+    
+   
+
+   
   }
   
   .editorProfile-href1 {

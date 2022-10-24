@@ -1,8 +1,17 @@
 import "./editorsProfile.css";
+// import {Link} from 'react-router-dom'
+import EditorModal from "./EditorModal";
+import { useState } from 'react';
+import React from "react";
 
 function EditorProfile() {
+
+  const [openModal, setOpenModal] = useState(false);
+  console.log(openModal)
+
   return (
     <div>
+       {openModal && <EditorModal setOpenModal={setOpenModal} />}
       <div className="editorProfile-container-bg">
         <div className="editorProfile-container-sm">
           <section className="editorProfile-section1">
@@ -21,13 +30,15 @@ function EditorProfile() {
                   <a href="#" className="editorProfile-href1">
                     120 Articles Posted
                   </a>
-                  <a href="#" className="editorProfile-href2">
-                    Edit Profile
-                  </a>
+               
+                  <button className="btnEditpro" onClick={() => setOpenModal(true) }>EditProfile</button>
+                  
+                
                   <a href="#" className="editorProfile-href2">
                     Add Post
                   </a>
                 </div>
+               
               </div>
             </div>
           </section>

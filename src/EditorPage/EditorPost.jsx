@@ -2,6 +2,7 @@
 import EditorProfile from "./EditorsProfile";
 import NavBar from "../NavBar/NavBar";
 
+
 const EditorPost = () => {
   return (
     <div>
