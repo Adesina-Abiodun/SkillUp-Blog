@@ -1,0 +1,13 @@
+
+body {
+    margin: 0;
+    padding: 0;
+}
+  
+.home-banner{
+    height: 500px;
+    width: 100%;
+    background-color: lightgray;
+    border-radius: 10px;
+    margin: 0;
+}  
