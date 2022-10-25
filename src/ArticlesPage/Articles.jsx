@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import "./Articles.css"
 
 const Articles = () => {
   const [posts, setposts] = useState([]);
@@ -25,7 +26,8 @@ const Articles = () => {
           <hr />
         </div>
 
-        <div className="CommonArticle">
+        <div className="commonArticle">
+
           {posts
             ?.slice(0, 9)
             .map(({ _id, coverImage, createdAt, title, body }) => {
@@ -34,10 +36,11 @@ const Articles = () => {
                   <img src={coverImage} alt={title} />
                   <h2>{title}</h2>
                   <p>{body.slice(0, 60)}....</p>
-                  <Link to={`posts/${_id}`}>Read More</Link>
+                  <Link to={`posts/${_id}`}> <button className="btn1">Read More</button> </Link>
                 </div>
               );
             })}
+            
         </div>
       </div>
     </div>
