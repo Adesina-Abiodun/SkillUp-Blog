@@ -19,6 +19,6 @@ export function contextProvider({children}) {
     });
 
     return (
-        <Context.Provider>{children}</Context.Provider>
+        <Context.Provider value={{access, setAccess}}>{children}</Context.Provider>
     )
 }
