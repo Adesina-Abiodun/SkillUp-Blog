@@ -5,7 +5,8 @@ import AddPost from "./AddPostPage/AddPost";
 import EditorPost from "./EditorPage/EditorPost";
 import Login from "./LoginPage/Login";
 import Register from "./RegisterPage/Register";
-import { ContextProvider} from './ContexApi/Context';
+import Articles from "./ArticlesPage/Articles";
+import {ContextProvider} from './ContexApi/Context';
 
 function App() {
   return (
