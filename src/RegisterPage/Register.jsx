@@ -17,6 +17,7 @@ const Register = () => {
         },
       })
       .then((response) => {
+        console.log(data);
         console.log(response.data.message);
       });
   };
