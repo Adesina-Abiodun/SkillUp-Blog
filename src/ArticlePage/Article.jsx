@@ -116,33 +116,7 @@ const Article = () => {
                 {/* SIMILAR ARTICLE */}
 
 
-                    <img src={GabielImage} alt="" />
-                    <h1>
-                        Ground Breaking Building is a Classic Example Architecture
-                    </h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Augue pellentesque quis non natoque cursus et venenatis. Sit
-                        posuere ut egestas volutpat adipiscing. Elementum ante
-                        viverra dolor, a ultrices cursus. Etiam gravida turpis
-                        commodo id enim a fringilla facilisis. A elit luctus
-                        accumsan habitant sed faucibus egestas faucibus dictum.
-                        Convallis viverra dictum non fusce sapien. Donec ut semper
-                        dictum mauris. Lobortis amet, senectus interdum hendrerit
-                        convallis adipiscing. Nisl ultricies vitae sem sed. Fusce
-                        enim velit massa maecenas vestibulum ac non arcu, porttitor.
-                        <br />
-                        <br /> Tempus vitae quis at convallis magnis nulla
-                        pellentesque in eu. Non, proin vestibulum adipiscing
-                        ullamcorper diam tristique ultricies. Sodales urna, rutrum
-                        justo, fames pellentesque morbi orci, integer. Sit eget
-                        lacus at nunc amet, ante. Faucibus ut enim, elementum
-                        venenatis penatibus non quam. Nisl, donec purus in cursus ut
-                        eget diam proin ac. Nisl sed ultrices dictum urna neque,
-                        vitae nisl. Sit amet consequat non purus nulla suspendisse
-                        consectetur. Bibendum et mattis turpis ac tincidunt.
-                    </p>
-                </div>
+                   
 
                 {/* SIMILAR ARTICLE */}
 
