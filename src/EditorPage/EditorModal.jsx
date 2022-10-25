@@ -1,6 +1,6 @@
 import React from 'react';
 import './EditorModal.css';
-import { useForm } from "react-hook-form";
+import { useForm, } from "react-hook-form";
 import axios from "axios";
 
 
@@ -29,7 +29,10 @@ function EditorModal({setOpenModal}) {
               <h3>EDIT YOUR PROFILE </h3>
               <br />
             <form onSubmit={handleSubmit(submitData)}>  
-              <div className='put'>
+          <div className='put'>
+            <input type="file" />
+            <br />
+            <br/>
             <input type="text" name='edit'{...register("edit")} placeholder='Edit your name'/>
               </div>  
               <br />
