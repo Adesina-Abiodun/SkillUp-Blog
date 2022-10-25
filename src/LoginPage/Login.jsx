@@ -41,6 +41,7 @@ function Login() {
 
 
   return (
+    <>
     <div className='loginpage'>
       <div className='logleft'>
         <div className="logtxtcnt">
@@ -70,6 +71,7 @@ function Login() {
         </div>
 ``      </div>
     </div>
+    </>
   )
 
 }
