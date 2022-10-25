@@ -10,10 +10,14 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom"
 import { useState } from "react";
 import ShowArticle from "./ShowArticle";
+import moment from "moment/moment";
 
 
 
 const Article = () => {
+
+    const [articlePost, setArticle] = useState([])
+    const {id} = useParams()
 
     const [modal, showModal] = useState(false)
     const popModal =()=>{
@@ -29,7 +33,7 @@ const Article = () => {
                     <div className="art-info">
                         <img src={GabielPics} alt="" />
                         <h3>Oluwatemi Gabiel</h3>
-                        <p>posted on October 12, 2022</p>
+                        <p>posted on October 12, 2022 - {id}</p>
                     </div>
 
                     <div className="share-me">
@@ -40,8 +44,40 @@ const Article = () => {
 
                 <div className="main">
                         { modal && <ShowArticle cancel={showModal}/> }
-                    <img src={GabielImage} alt="" />
-                    <h1>
+
+                        <div>
+
+                        {articlePost?.slice(0,9).map(({_id, coverImage, createdAt, title, body}) => {
+                    return(
+      
+                            <div key={_id}>
+                                <div ><img src={coverImage} alt={title} /></div>
+                                <p>{moment(createdAt).startOf('hour').fromNow()}</p>
+                                <h4>{title}</h4>
+                                <p>{body.slice(0,60)}....</p>
+                            </div>
+            
+                    )
+                })}
+
+                {/* {posts?.slice(0,9).map(({_id, coverImage, createdAt, title, body}) => {
+                    return(
+      
+                            <div key={_id}>
+                                <div ><img src={coverImage} alt={title} /></div>
+                                <p>{moment(createdAt).startOf('hour').fromNow()}</p>
+                                <h1>{title}</h1>
+                                <p>{body.slice(0,60)}....</p>
+                            </div>
+                    )
+                })} */}
+            </div>
+
+
+
+
+                    {/* <img src={GabielImage} alt="" /> */}
+                    {/* <h1>
                         Ground Breaking Building is a Classic Example Architecture
                     </h1>
                     <p>
@@ -65,7 +101,7 @@ const Article = () => {
                         eget diam proin ac. Nisl sed ultrices dictum urna neque,
                         vitae nisl. Sit amet consequat non purus nulla suspendisse
                         consectetur. Bibendum et mattis turpis ac tincidunt.
-                    </p>
+                    </p> */}
                 </div>
 
                 {/* SIMILAR ARTICLE */}
