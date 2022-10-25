@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Articles.css"
 
-const ArticlesPage = () => {
+const Articles = () => {
   const [posts, setposts] = useState([]);
 
   useEffect(() => {
@@ -48,6 +48,6 @@ const ArticlesPage = () => {
   );
 };
 
-export default ArticlesPage;
+export default Articles;
 
 
