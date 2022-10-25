@@ -12,7 +12,7 @@ function EditorProfile() {
 
   useEffect(() => {
     axios
-      .get("https://miniblogskillup.herokuapp.com/api/editor/" + id)
+      .get("https://miniblogskillup.herokuapp.com/api/user/editor/" + id)
       .then((result) => {
         console.log(result.data);
       })
