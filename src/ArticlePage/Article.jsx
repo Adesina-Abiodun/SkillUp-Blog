@@ -1,9 +1,6 @@
 import React from "react";
 import GabielPics from "./assets/GabielPics.svg";
 import GabielImage from "./assets/GabielImage.svg";
-import Image1 from "./assets/Image1.svg";
-import Image2 from "./assets/Image2.svg";
-import Image3 from "./assets/Image3.svg";
 import "./Article.css";
 import NavBar from '../NavBar/NavBar'
 import { Link } from "react-router-dom";
@@ -22,7 +19,6 @@ const Article = () => {
         showModal(true)
     }
 
-    // const {id} = useParams()
     return (
         <div>
             <NavBar />
@@ -63,56 +59,21 @@ const Article = () => {
                             )
                         })}
 
-                 
-
+             
                
             </div>
+
+
+
+
+                       
                 </div>
 
 
-                <div className="similarArticle">
-                    <div className="sim-art">
-                        <hr />
-                        <h1>Similar Articles </h1>
-                        <hr />
-                    </div>
-                    <div className="commonArticle">
-                        <div className="artBox">
-                            <img src={Image1} alt="" />
-                            <h2>How to build a successfully business in Nigeria</h2>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing
-                                elit. Iaculis urna imperdiet netus nibh at fermentum
-                                mattis. Amet adipiscing
-                            </p>
-                            <button className='btn1'>Read More</button>
-                        </div>
-                        <div className="artBox">
-                            <img src={Image2} alt="" />
-                            <h2>How to build a successfully business in Nigeria</h2>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing
-                                elit. Iaculis urna imperdiet netus nibh at fermentum
-                                mattis. Amet adipiscing
-                            </p>
-                            <button className='btn2'>Read More</button>
-                        </div>
 
-
-                            <div className="artBox">
-                                <img src={Image3} alt="" />
-                                <h2>How to build a successfully business in Nigeria</h2>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing
-                                    elit. Iaculis urna imperdiet netus nibh at fermentum
-                                    mattis. Amet adipiscing
-                                </p>
-                                <button className='btn3'>Read More</button>
-                            </div>
-                    </div>
                 </div>
             </div>
-        </div>
+        
     );
 };
 
