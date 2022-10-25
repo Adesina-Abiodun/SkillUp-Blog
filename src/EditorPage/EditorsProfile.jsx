@@ -1,8 +1,30 @@
 import "./editorsProfile.css";
+import { useParams } from "react-router-dom";
+import EditorModal from "./EditorModal";
+import { useEffect, useState } from "react";
+import React from "react";
+import axios from "axios";
 
 function EditorProfile() {
+  const { id } = useParams();
+  const [openModal, setOpenModal] = useState(false);
+  const [editorData, setEditorData] = useState({})
+
+  useEffect(() => {
+    axios
+      .get("https://miniblogskillup.herokuapp.com/api/editor/" + id)
+      .then((result) => {
+        console.log(result.data);
+      })
+      .catch((err) => {
+        console.error(err.response.data);
+      });
+  }, []);
+
   return (
     <div>
+      {openModal && <EditorModal editorData={editorData} setOpenModal={setOpenModal} />}
+
       <div className="editorProfile-container-bg">
         <div className="editorProfile-container-sm">
           <section className="editorProfile-section1">
@@ -17,12 +39,21 @@ function EditorProfile() {
                   Twitter @oluatemisam or send him an email:
                   gabiel@skillup.africa
                 </p>
-                <div className="editorProfile-btnDivs">
-                  <button className="editorProfile-btn1">
+                <div className="editorProfile-refsDivs">
+                  <a href="#" className="editorProfile-href1">
                     120 Articles Posted
+                  </a>
+
+                  <button
+                    className="btnEditpro"
+                    onClick={() => setOpenModal(true)}
+                  >
+                    EditProfile
                   </button>
-                  <button className="editorProfile-btn2">Edit Profile</button>
-                  <button className="editorProfile-btn3">Add Post</button>
+
+                  <a href="#" className="editorProfile-href2">
+                    Add Post
+                  </a>
                 </div>
               </div>
             </div>
