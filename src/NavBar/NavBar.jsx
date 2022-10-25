@@ -20,9 +20,9 @@ const NavBar = () => {
         <nav className="nav">
             <div className="nav-list">
                 <ul>
-                    <NavLink to={'/'}><li>Home</li></NavLink>
-                    <NavLink to={'/post'}><li>Articles</li></NavLink>
-                    <NavLink to={'/editor/:id'}><li>About us</li></NavLink>
+                    <NavLink to='/'><li>Home</li></NavLink>
+                    <NavLink to='/posts'><li>Articles</li></NavLink>
+                    <NavLink to='/editor/:id'><li>About us</li></NavLink>
                 </ul>
             </div>
 

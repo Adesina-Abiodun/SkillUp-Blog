@@ -2,17 +2,25 @@ import { useEffect, useState } from "react";
 import axios from 'axios';
 import moment from "moment/moment";
 import './HomeBody.css'
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const Home = () => {
     const [posts, setposts] = useState([]);
     useEffect(() => {
+<<<<<<< HEAD
         axios.get('https://miniblogskillup.herokuapp.com/api/posts')
+=======
+        axios.get('https://miniblogskillup.herokuapp.com/api/posts/')
+>>>>>>> main
         .then(response => {
             console.log(response.data);
             setposts(response.data.data.news)
         })
+<<<<<<< HEAD
     }, [])
+=======
+    },[])
+>>>>>>> main
 
     return ( 
         <div>
@@ -20,7 +28,12 @@ const Home = () => {
             <div className="home-blogpost">
                 {posts?.slice(0,9).map(({_id, coverImage, createdAt, title, body}) => {
                     return(
+<<<<<<< HEAD
                         <Link className='home-link' to={`posts/${_id}`} key={_id}>
+=======
+      
+                        <Link className='home-link' to={`post/${_id}`} key={_id}>
+>>>>>>> a6b9b4e165d4af9726f82c151092c32976ded0a9
                             <div className="home-blogcontainer" key={_id}>
                                 <div ><img className="home-articleimage" src={coverImage} alt={title} /></div>
                                 <p className="home-date">{moment(createdAt).startOf('hour').fromNow()}</p>
