@@ -1,14 +1,18 @@
-import "./register.css"
-import axios from "axios"
-import { NavLink } from "react-router-dom"
-import { useForm } from "react-hook-form"
-
+import "./register.css";
+import axios from "axios";
+import { NavLink, useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
 
 const Register = () => {
-  const { watch, register, handleSubmit, formState: { errors } } = useForm({});
+  const navigate = useNavigate();
+  const {
+    watch,
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({});
 
   const onSubmit = (data) => {
-
     axios
       .post("https://miniblogskillup.herokuapp.com/api/users/register", data, {
         headers: {
@@ -17,16 +21,17 @@ const Register = () => {
         },
       })
       .then((response) => {
-        console.log(response.data.message);
+        setTimeout(() => navigate("/login"), 2000);
+        alert(response.data.message);
+      })
+      .catch((err) => {
+        alert(err.response.data.message);
       });
   };
 
-
   return (
     <main className="register-wrapper">
-
       <div className="register">
-
         <section className="register-banner">
           <NavLink to="/">SkillUp Africa Blog</NavLink>
 
@@ -40,70 +45,94 @@ const Register = () => {
         </section>
 
         <section className="form-wrapper">
-
           <div className="register-form">
-
             <div className="form-title">
               <h2>Create an account</h2>
               <p>Let’s start a journey to great articles</p>
             </div>
 
             <form onSubmit={handleSubmit(onSubmit)}>
-
-
-              <input type="text" placeholder="Name"
-                {...register("username", {
+              <input
+                type="text"
+                placeholder="Name"
+                {...register("userName", {
                   required: true,
-                  maxLength: 30
+                  maxLength: 30,
                 })}
               />
-              <p id="text">{errors.username?.type === "required" && "Your name is required"}</p>
-              <p id="text">{errors.username?.type === "maxLength" && "Your name is should not be more than 30 characters long"}</p>
+              <p id="text">
+                {errors.username?.type === "required" &&
+                  "Your name is required"}
+              </p>
+              <p id="text">
+                {errors.username?.type === "maxLength" &&
+                  "Your name is should not be more than 30 characters long"}
+              </p>
 
-
-              <input type="email" placeholder="Email Address"
+              <input
+                type="email"
+                placeholder="Email Address"
                 {...register("email", {
                   required: true,
-                  pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+                  pattern:
+                    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
                 })}
               />
-              <p id="text">{errors.email?.type === "required" && "Please enter an email address"}</p>
-              <p id="text">{errors.email?.type === "pattern" && "Your email address is not valid"}</p>
+              <p id="text">
+                {errors.email?.type === "required" &&
+                  "Please enter an email address"}
+              </p>
+              <p id="text">
+                {errors.email?.type === "pattern" &&
+                  "Your email address is not valid"}
+              </p>
 
-
-              <input type="password" placeholder="Password"
+              <input
+                type="password"
+                placeholder="Password"
                 {...register("password", {
                   required: true,
-                  pattern: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$/
-                })} />
-              <p id="text">{errors.password?.type === "required" && "Please enter a password"}</p>
-              <p id="text">{errors.password?.type === "pattern" && "Password must contain letters,Uppercase, Numbers, special character and should not be less than 6 and more than 15 characters"}</p>
+                  pattern: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$/,
+                })}
+              />
+              <p id="text">
+                {errors.password?.type === "required" &&
+                  "Please enter a password"}
+              </p>
+              <p id="text">
+                {errors.password?.type === "pattern" &&
+                  "Password must contain letters,Uppercase, Numbers, special character and should not be less than 6 and more than 15 characters"}
+              </p>
 
-
-              <input type="password" placeholder="Confirm Password"
+              <input
+                type="password"
+                placeholder="Confirm Password"
                 {...register("confirmPassword", {
                   required: true,
                   validate: (value) => {
-                    if (watch('password') != value) {
+                    if (watch("password") != value) {
                       return "Your passwords do no match";
                     }
                   },
-                })} />
-              <p id="text">{errors.confirmPassword?.type === "validate" && "Password does not match"}</p>
-
+                })}
+              />
+              <p id="text">
+                {errors.confirmPassword?.type === "validate" &&
+                  "Password does not match"}
+              </p>
 
               <br />
               <button type="submit">Create an account</button>
             </form>
 
-            <p>Already have an account? <NavLink to="/login">Log in</NavLink></p>
-
+            <p>
+              Already have an account? <NavLink to="/login">Log in</NavLink>
+            </p>
           </div>
         </section>
-
       </div>
     </main>
   );
-}
+};
 
 export default Register;

@@ -12,7 +12,7 @@ const Home = () => {
             console.log(response.data);
             setposts(response.data)
         })
-    })
+    },[])
 
     return ( 
         <div>
