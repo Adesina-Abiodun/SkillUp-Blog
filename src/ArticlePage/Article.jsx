@@ -10,22 +10,16 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom"
 import { useState } from "react";
 import ShowArticle from "./ShowArticle";
-
 import moment from "moment/moment";
 
 
-
-
 const Article = () => {
-
-
     const [articlePost, setArticle] = useState([])
-    const {id} = useParams()
-
+    const { id } = useParams()
 
     const [modal, showModal] = useState(false)
-    const popModal =()=>{
-       showModal(true)
+    const popModal = () => {
+        showModal(true)
     }
 
     // const {id} = useParams()
@@ -51,23 +45,23 @@ const Article = () => {
                 </div>
 
                 <div className="main">
-                        { modal && <ShowArticle cancel={showModal}/> }
+                    {modal && <ShowArticle cancel={showModal} />}
 
 
-                        <div>
+                    <div>
 
-                        {articlePost?.slice(0,9).map(({_id, coverImage, createdAt, title, body}) => {
-                    return(
-      
-                            <div key={_id}>
-                                <div ><img src={coverImage} alt={title} /></div>
-                                <p>{moment(createdAt).startOf('hour').fromNow()}</p>
-                                <h4>{title}</h4>
-                                <p>{body.slice(0,60)}....</p>
-                            </div>
-            
-                    )
-                })}
+                        {articlePost?.slice(0, 9).map(({ _id, coverImage, createdAt, title, body }) => {
+                            return (
+
+                                <div key={_id}>
+                                    <div ><img src={coverImage} alt={title} /></div>
+                                    <p>{moment(createdAt).startOf('hour').fromNow()}</p>
+                                    <h4>{title}</h4>
+                                    <p>{body.slice(0, 60)}....</p>
+                                </div>
+
+                            )
+                        })}
 
                 {/* {posts?.slice(0,9).map(({_id, coverImage, createdAt, title, body}) => {
                     return(
