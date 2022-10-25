@@ -26,6 +26,7 @@ const Register = () => {
       })
       .catch((err) => {
         alert(err.response.data.message);
+
       });
   };
 
