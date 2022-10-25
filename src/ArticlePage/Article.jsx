@@ -22,7 +22,7 @@ const Article = () => {
         showModal(true)
     }
 
-
+    // const {id} = useParams()
     return (
         <div>
             <NavBar />
@@ -63,21 +63,11 @@ const Article = () => {
                             )
                         })}
 
-                        {/* {posts?.slice(0,9).map(({_id, coverImage, createdAt, title, body}) => {
-                    return(
-      
-                            <div key={_id}>
-                                <div ><img src={coverImage} alt={title} /></div>
-                                <p>{moment(createdAt).startOf('hour').fromNow()}</p>
-                                <h1>{title}</h1>
-                                <p>{body.slice(0,60)}....</p>
-                            </div>
-                    )
-                })} */}
-                    </div>
-                </div>
+                 
 
-                SIMILAR ARTICLE
+               
+            </div>
+                </div>
 
 
                 <div className="similarArticle">
@@ -108,16 +98,17 @@ const Article = () => {
                             <button className='btn2'>Read More</button>
                         </div>
 
-                        <div className="artBox">
-                            <img src={Image3} alt="" />
-                            <h2>How to build a successfully business in Nigeria</h2>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing
-                                elit. Iaculis urna imperdiet netus nibh at fermentum
-                                mattis. Amet adipiscing
-                            </p>
-                            <button className='btn3'>Read More</button>
-                        </div>
+
+                            <div className="artBox">
+                                <img src={Image3} alt="" />
+                                <h2>How to build a successfully business in Nigeria</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit. Iaculis urna imperdiet netus nibh at fermentum
+                                    mattis. Amet adipiscing
+                                </p>
+                                <button className='btn3'>Read More</button>
+                            </div>
                     </div>
                 </div>
             </div>
