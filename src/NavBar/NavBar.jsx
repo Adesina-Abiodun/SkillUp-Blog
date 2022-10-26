@@ -1,15 +1,14 @@
 import './NavBar.css'
 import {NavLink, Link} from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import fsvg from './images/facebook.svg'
 import tsvg from './images/twitter.svg'
 import isvg from './images/instagram.svg'
 import ysvg from './images/youtube.svg'
-
+import { Context } from '../ContexApi/Context';
 
 const NavBar = () => {
-
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const {access} = useContext(Context)
 
     return ( 
         <div className='navbar'>
@@ -20,9 +19,9 @@ const NavBar = () => {
         <nav className="nav">
             <div className="nav-list">
                 <ul>
-                    <NavLink to={'/'}><li>Home</li></NavLink>
-                    <NavLink to={'/post'}><li>Articles</li></NavLink>
-                    <NavLink to={'/editor/:id'}><li>About us</li></NavLink>
+                    <NavLink to='/'><li>Home</li></NavLink>
+                    <NavLink to='/posts'><li>Articles</li></NavLink>
+                    <NavLink to='/editor/:id'><li>About us</li></NavLink>
                 </ul>
             </div>
 
@@ -35,7 +34,7 @@ const NavBar = () => {
                 </div>
 
                 <div className="post-button">
-                    <Link to={isLoggedIn ? "/post" : "/login"}>Post your article</Link>
+                    <Link to={access.isLoggedIn ? "/add-post" : "/login"}>Post your article</Link>
                 </div>
                
             </div>
