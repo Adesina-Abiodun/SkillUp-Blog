@@ -47,11 +47,9 @@ function Login() {
   };
 
   return (
-
     <>
     <div className='loginpage'>
       <div className='logleft'>
-
         <div className="logtxtcnt">
           <div className="logspace"></div>
           <NavLink className="loghome" to="/">
@@ -102,7 +100,6 @@ function Login() {
         </div>
       </div>
     </div>
-
     </>
   )
 
