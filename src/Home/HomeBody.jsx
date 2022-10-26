@@ -20,12 +20,7 @@ const Home = () => {
             <div className="home-blogpost">
                 {posts?.slice(0,9).map(({_id, coverImage, createdAt, title, body}) => {
                     return(
-<<<<<<< HEAD
-      
-                        <Link className='home-link' to={`post/${_id}`} key={_id}>
-=======
                         <Link className='home-link' to={`posts/${_id}`} key={_id}>
->>>>>>> main
                             <div className="home-blogcontainer" key={_id}>
                                 <div ><img className="home-articleimage" src={coverImage} alt={title} /></div>
                                 <p className="home-date">{moment(createdAt).startOf('hour').fromNow()}</p>
