@@ -1,5 +1,5 @@
 import "./editorsProfile.css";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import EditorModal from "./EditorModal";
 import { useEffect, useState } from "react";
 import React from "react";
@@ -8,7 +8,7 @@ import axios from "axios";
 function EditorProfile() {
   const { id } = useParams();
   const [openModal, setOpenModal] = useState(false);
-  const [editorData, setEditorData] = useState({})
+  const [editorData, setEditorData] = useState({});
 
   useEffect(() => {
     axios
@@ -23,7 +23,9 @@ function EditorProfile() {
 
   return (
     <div>
-      {openModal && <EditorModal editorData={editorData} setOpenModal={setOpenModal} />}
+      {openModal && (
+        <EditorModal editorData={editorData} setOpenModal={setOpenModal} />
+      )}
 
       <div className="editorProfile-container-bg">
         <div className="editorProfile-container-sm">
@@ -50,10 +52,9 @@ function EditorProfile() {
                   >
                     EditProfile
                   </button>
-
-                  <a href="#" className="editorProfile-href2">
+                  <Link to="/add-post" className="editorProfile-href2">
                     Add Post
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -80,7 +81,25 @@ function EditorProfile() {
             </section>
             <section className="editorProfile-cardSection">
               <div className="editorProfile-cards">
-                <div className="editorProfile-card1Div">
+                {["","", "", ""].map((a, i) => {
+                  return (
+                    <div key={i} className="editorProfile-card1Div">
+                      <div className="editorProfile-cardBg"></div>
+                      <div className="editorProfile-cardText">
+                        <h3>How to build a successfull business in Nigeria </h3>
+                        <p>
+                          Lorem ipsum dolor sit, amet consectetur adipisicing
+                          elit. Voluptate consequatur earum beatae ullam sint
+                          quam incidunt ad dolor, nam quo.
+                        </p>
+                        <button className="editorProfile-readMoreBtn">
+                          Read more
+                        </button>
+                      </div>
+                    </div>
+                  );
+                })}
+                {/* <div className="editorProfile-card1Div">
                   <div className="editorProfile-cardBg"></div>
                   <div className="editorProfile-cardText">
                     <h3>How to build a successfull business in Nigeria </h3>
@@ -93,8 +112,8 @@ function EditorProfile() {
                       Read more
                     </button>
                   </div>
-                </div>
-                <div className="editorProfile-card1Div">
+                </div> 
+                 <div className="editorProfile-card1Div">
                   <div className="editorProfile-cardBg"></div>
                   <div className="editorProfile-cardText">
                     <h3>How to build a successfull business in Nigeria </h3>
@@ -107,22 +126,9 @@ function EditorProfile() {
                       Read more
                     </button>
                   </div>
-                </div>
-                <div className="editorProfile-card1Div">
-                  <div className="editorProfile-cardBg"></div>
-                  <div className="editorProfile-cardText">
-                    <h3>How to build a successfull business in Nigeria </h3>
-                    <p>
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Voluptate consequatur earum beatae ullam sint quam
-                      incidunt ad dolor, nam quo.
-                    </p>
-                    <button className="editorProfile-readMoreBtn">
-                      Read more
-                    </button>
-                  </div>
-                </div>
+                </div> */}
               </div>
+              {/* 
               <div className="editorProfile-cards2">
                 <div className="editorProfile-card2Div">
                   <div className="editorProfile-cardBg"></div>
@@ -133,8 +139,8 @@ function EditorProfile() {
                       Read more
                     </button>
                   </div>
-                </div>
-                <div className="editorProfile-card1Div">
+                </div> 
+                 <div className="editorProfile-card1Div">
                   <div className="editorProfile-cardBg"></div>
                   <div className="editorProfile-cardText">
                     <h3>How to build a successfull business in Nigeria </h3>
@@ -155,6 +161,7 @@ function EditorProfile() {
                   </div>
                 </div>
               </div>
+                 */}
             </section>
           </div>
         </div>
