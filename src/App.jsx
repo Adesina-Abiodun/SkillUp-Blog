@@ -6,12 +6,12 @@ import EditorPost from "./EditorPage/EditorPost";
 import Login from "./LoginPage/Login";
 import Register from "./RegisterPage/Register";
 import Articles from "./ArticlesPage/Articles";
-import {contextProvider} from './ContexApi/Context';
+// import {contextProvider} from './ContexApi/Context';
 
 function App() {
   return (
     <div className="App">
-    <ContextProvider>
+    {/* <ContextProvider> */}
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/posts' element={<Articles/>}/>
@@ -21,7 +21,7 @@ function App() {
         <Route path='/login' element={<Login/>}/>
         <Route path='/register' element={<Register/>}/>
       </Routes> 
-    </ContextProvider>
+    {/* </ContextProvider> */}
 </div>
   );
 }

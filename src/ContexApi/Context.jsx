@@ -1,24 +1,24 @@
-import { createContext, useState, useEffect } from "react";
+// import { createContext, useState, useEffect } from "react";
 
-export const Context = createContext();
+// export const Context = createContext();
 
 
-export function ContextProvider({children}) {
+// export function ContextProvider({children}) {
 
-    useEffect(() => {
-       {
-         localStorage.getItem('mini-blog-access') === null
-         ? localStorage.setItem('mini-blog-access')
-         : setAccess(JSON.parse(localStorage.getItem('mini-blog-access')))
-       }
-    }, [])
+//     useEffect(() => {
+//        {
+//          localStorage.getItem('mini-blog-access') === null
+//          ? localStorage.setItem('mini-blog-access')
+//          : setAccess(JSON.parse(localStorage.getItem('mini-blog-access')))
+//        }
+//     }, [])
 
-    const [access, setAccess] = useState({
-        token: '',
-        isLoggedIn: false,
-    });
+//     const [access, setAccess] = useState({
+//         token: '',
+//         isLoggedIn: false,
+//     });
 
-    return (
-        <Context.Provider value={{access, setAccess}}>{children}</Context.Provider>
-    )
-}
+//     return (
+//         <Context.Provider value={{access, setAccess}}>{children}</Context.Provider>
+//     )
+// }
