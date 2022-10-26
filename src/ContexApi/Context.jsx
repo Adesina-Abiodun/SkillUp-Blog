@@ -4,19 +4,7 @@ export const Context = createContext();
 
 
 export function ContextProvider({children}) {
-
-    useEffect(() => {
-       {
-         localStorage.getItem('mini-blog-access') === null
-         ? localStorage.setItem('mini-blog-access')
-         : setAccess(JSON.parse(localStorage.getItem('mini-blog-access')))
-       }
-    }, [])
-
-    const [access, setAccess] = useState({
-        token: '',
-        isLoggedIn: false,
-    });
+    const [access, setAccess] = useState(JSON.parse(localStorage.getItem('mini-blog-access')));
 
     return (
         <Context.Provider value={{access, setAccess}}>{children}</Context.Provider>
