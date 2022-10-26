@@ -7,7 +7,7 @@ body {
 .home-banner{
     height: 500px;
     width: 100%;
-    background-color: lightgray;
+    /* background-color: lightgray; */
     border-radius: 10px;
     margin: 0;
 }  

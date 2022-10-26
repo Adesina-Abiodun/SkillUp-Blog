@@ -33,11 +33,11 @@ const ArticlesPage = () => {
             ?.slice(0, 9)
             .map(({ _id, coverImage, createdAt, title, body }) => {
               return (
-                <div className="ArtBox">
+                <div key={_id} className="ArtBox">
                   <img src={coverImage} alt={title} />
                   <h2>{title}</h2>
                   <p>{body.slice(0, 60)}....</p>
-                  <Link to={`posts/${_id}`}> <button className="btn1">Read More</button> </Link>
+                  <Link to={`/post/${_id}`}> <button className="btn1">Read More</button> </Link>
                 </div>
               );
             })}
