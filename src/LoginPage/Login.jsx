@@ -47,14 +47,9 @@ function Login() {
   };
 
   return (
-<<<<<<< HEAD
     <>
     <div className='loginpage'>
       <div className='logleft'>
-=======
-    <div className="loginpage">
-      <div className="logleft">
->>>>>>> main
         <div className="logtxtcnt">
           <div className="logspace"></div>
           <NavLink className="loghome" to="/">
@@ -105,13 +100,9 @@ function Login() {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
     </>
   )
 
-=======
-  );
->>>>>>> main
 }
 
 export default Login;
