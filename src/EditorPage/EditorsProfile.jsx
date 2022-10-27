@@ -1,25 +1,9 @@
 import "./editorsProfile.css";
-
-// import {Link} from 'react-router-dom'
 import EditorModal from "./EditorModal";
-import { useState } from 'react';
-import React from "react";
-
-function EditorProfile() {
-
-  const [openModal, setOpenModal] = useState(false);
-  console.log(openModal)
-
-  return (
-    <div>
-      {openModal && <EditorModal setOpenModal={setOpenModal} />}
-        
-
 import { Link, useParams } from "react-router-dom";
-import EditorModal from "./EditorModal";
 import { useEffect, useState } from "react";
-import React from "react";
 import axios from "axios";
+
 
 function EditorProfile() {
   const { id } = useParams();
@@ -67,7 +51,7 @@ function EditorProfile() {
                   <button className="btnEditpro" onClick={() => setOpenModal(true) }>EditProfile</button>
                   
                 
-                  <a href="#" className="editorProfile-href2">
+                  {/* <a href="#" className="editorProfile-href2"> */}
 
 
                   <button
