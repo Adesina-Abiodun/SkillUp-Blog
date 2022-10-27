@@ -7,12 +7,12 @@ import { Link } from "react-router-dom";
 const Home = () => {
     const [posts, setposts] = useState([]);
     useEffect(() => {
-        axios.get('https://jsonplaceholder.typicode.com/photos')
-        .then(response => {
+    axios
+      .get("https://miniblogskillup.herokuapp.com/api/posts/")
+      .then((response) => {
             console.log(response.data);
-            setposts(response.data)
-        })
-    })
+        setposts(response.data.data.news.reverse(a => a));
+    }), []});
 
     return ( 
         <div>
