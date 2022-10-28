@@ -2,6 +2,15 @@ import "./register.css";
 import axios from "axios";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import "animate.css/animate.min.css";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer, toast, cssTransition } from "react-toastify";
+
+
+const bounce = cssTransition({
+  enter: "animate__animated animate__bounceIn",
+  exit: "animate__animated animate__bounceOut"
+});
 
 const Register = () => {
   const navigate = useNavigate();
@@ -22,10 +31,16 @@ const Register = () => {
       })
       .then((response) => {
         setTimeout(() => navigate("/login"), 2000);
-        alert(response.data.message);
+        toast.success(response.data.message, {
+          transition: bounce,
+          hideProgressBar
+        });
       })
       .catch((err) => {
-        alert(err.response.data.message);
+        toast.error(err.response.data.message, {
+          transition: bounce,
+          hideProgressBar
+        });
 
       });
   };
@@ -132,6 +147,7 @@ const Register = () => {
           </div>
         </section>
       </div>
+      <ToastContainer transition={bounce} />
     </main>
   );
 };
