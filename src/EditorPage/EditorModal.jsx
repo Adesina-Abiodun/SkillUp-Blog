@@ -10,7 +10,7 @@ function EditorModal({ setOpenModal, editorData }) {
 
   const submitData = (data) => {
     console.log(data);
-    axios.post(" ", data).then((response) => {
+    axios.post("", data).then((response) => {
       console.log(response);
       alert(response);
     });
@@ -59,3 +59,4 @@ function EditorModal({ setOpenModal, editorData }) {
 }
 
 export default EditorModal;
+

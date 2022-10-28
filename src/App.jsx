@@ -12,6 +12,7 @@ import { useEffect } from "react";
 function App() {
   useEffect(() => {
     {
+      console.log(localStorage.getItem("mini-blog-access"));
       localStorage.getItem("mini-blog-access") === null &&
         localStorage.setItem("mini-blog-access", JSON.stringify({
           token: "",

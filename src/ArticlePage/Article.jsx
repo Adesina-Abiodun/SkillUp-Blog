@@ -43,6 +43,7 @@ const Article = () => {
       });
   }, []);
 
+
   return (
     <div>
       <NavBar />
@@ -54,6 +55,7 @@ const Article = () => {
             {moment(articlePost.createdAt).startOf("hour").fromNow()}
           </div>
 
+
           <div className="share-me">
             <button onClick={popModal} className="click">
               Edit
@@ -61,6 +63,8 @@ const Article = () => {
             <button className="click">Share me</button>
           </div>
         </div>
+                   
+
 
         <div className="main">
           {modal && <ShowArticle articlePost={articlePost} cancel={showModal} />}
@@ -120,11 +124,11 @@ const Article = () => {
                         vitae nisl. Sit amet consequat non purus nulla suspendisse
                         consectetur. Bibendum et mattis turpis ac tincidunt.
                     </p> */}
+
         </div>
 
-        {/* SIMILAR ARTICLE */}
 
-        {/* SIMILAR ARTICLE */}
+
 
         <div className="similarArticle">
           <div className="sim-art">
@@ -152,6 +156,12 @@ const Article = () => {
                 </div>
               );
             })}
+
+            
+            
+
+            
+
             {/*
             <div className="artBox">
               <img src={Image2} alt="" />
@@ -172,6 +182,7 @@ const Article = () => {
               </p>
               <button className="btn3">Read More</button>
             </div> */}
+
           </div>
         </div>
       </div>

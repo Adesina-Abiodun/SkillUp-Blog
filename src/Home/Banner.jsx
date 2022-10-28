@@ -19,13 +19,18 @@ function Banner() {
 
   useEffect(() => {
     axios
-      .get("https://miniblogskillup.herokuapp.com/api/posts/")
+      .get("https://miniblogskillup.herokuapp.com/api/posts/",{
+        headers:{
+          "Content-Type" :"application/json"
+        }
+      })
       .then((response) => {
+        console.log(response.data.data.news);
         setArticle(response.data.data.news.reverse(a => a));
         console.log(response.data.data.news);
       })
       .catch((res) => {
-        alert(res.message);
+        console.log(res.message);
       });
   }, []);
 

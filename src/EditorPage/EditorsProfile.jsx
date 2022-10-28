@@ -1,9 +1,9 @@
 import "./editorsProfile.css";
-import { Link, useParams } from "react-router-dom";
 import EditorModal from "./EditorModal";
+import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import React from "react";
 import axios from "axios";
+
 
 function EditorProfile() {
   const { id } = useParams();
@@ -27,6 +27,7 @@ function EditorProfile() {
         <EditorModal editorData={editorData} setOpenModal={setOpenModal} />
       )}
 
+
       <div className="editorProfile-container-bg">
         <div className="editorProfile-container-sm">
           <section className="editorProfile-section1">
@@ -46,6 +47,13 @@ function EditorProfile() {
                     120 Articles Posted
                   </a>
 
+               
+                  <button className="btnEditpro" onClick={() => setOpenModal(true) }>EditProfile</button>
+                  
+                
+                  {/* <a href="#" className="editorProfile-href2"> */}
+
+
                   <button
                     className="btnEditpro"
                     onClick={() => setOpenModal(true)}
@@ -53,9 +61,11 @@ function EditorProfile() {
                     EditProfile
                   </button>
                   <Link to="/add-post" className="editorProfile-href2">
+
                     Add Post
                   </Link>
                 </div>
+               
               </div>
             </div>
           </section>
